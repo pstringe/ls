@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 12:59:29 by pstringe          #+#    #+#             */
-/*   Updated: 2018/04/30 19:06:32 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/05/01 06:44:20 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void				*ft_dequeue(struct s_queue *q)
-void				ft_enqueue(struct s_queue *q, void *n, size_t size)
-t_queue				*ft_queuenw(void *n, size_t size)
+void				*ft_dequeue(struct s_queue *q);
+void				ft_enqueue(struct s_queue *q, void *n, size_t size);
+t_queue				*ft_queuenw(void *n, size_t size);
 t_list				**ft_lstsethead(t_list *elem);
 void				ft_two_d_free(void **array);
 int					ft_is_whitespace(int c);
