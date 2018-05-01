@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/05/01 06:50:52 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/05/01 06:58:08 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int		display_directory(char *dir)
 	if (!(dp = opendir((const char*)dir)))
 		return (-1);
 	while ((dptr = readdir(dp)))
-		ft_putendl(dptr->d_name);
+		if (dptr->d_name[0] != '.')
+			ft_putendl(dptr->d_name);
 	return (0);
 }
 
