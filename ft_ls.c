@@ -6,53 +6,147 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/05/01 06:58:08 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/05/01 19:01:34 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-/*
-int		ft_ls(t_queue *sd)
-{
-	t_dir	*wd;
 
-	if (!sd->tail)
-		return (0);
-	wd = ft_dequeue(sd);
-	search_diectory(wd);
-	display_directory(wd);
-	while ((wd = ft_dequeu(sd)))
-		ft_ls(sd);
-}
-*/
-int		display_directory(char *dir)
+typedef struct	s_dir
 {
-	DIR				*dp;
-	struct dirent	*dptr;
+	char			*p;
+	DIR				*d;
+	t_list			*f;
+}				t_dir;
+
+typedef struct	s_ops
+{
+	int	l;
+	int	a;
+	int	t;
+	int	r;
+	int	R;
+}				t_ops;
+
+void 	init_options(t_ops **ops)
+{
+	t_ops *o;
+
+	o = ft_memalloc(sizeof(t_ops));
+	o->l = 0;
+	o->a = 0;
+	o->t = 0;
+	o->r = 0;
+	o->R = 0;
+	*ops = o;
+}
+
+int 	parse_options(char **args, int argn, t_ops *ops)
+{
+	int	i;
+	int	j;
 	
-	if (!(dp = opendir((const char*)dir)))
-		return (-1);
-	while ((dptr = readdir(dp)))
-		if (dptr->d_name[0] != '.')
-			ft_putendl(dptr->d_name);
-	return (0);
+	i = 0;
+	while (args[++i][0] == '-' && i < argn)
+	{
+		j = -1;
+		while (args[i][++j])
+		{
+			if (args[i][j] == 'l')
+				ops->l = 1;
+			else if (args[i][j] == 'a')
+				ops->a = 1;
+			else if (args[i][j] == 't')
+				ops->t = 1;
+			else if (args[i][j] == 'r')
+				ops->r = 1;
+			else if (args[i][j] == 'R')
+				ops->R = 1;
+			else
+				return (0);
+		}
+	}
+	return (i);
 }
 
-int		main(int argc, char **argv)
+void	display(t_dir *dir)
 {
-	//t_queue		*sub_dirs;
-	int			i;
-	char		*flags;
+	t_list *files;
 
-	flags = NULL;
-	if (argc >= 2)
+	ft_putendl(dir->p);
+	files = dir->f;
+	while (files)
 	{
-		flags = argv[1][0] == '-' ? (argv[1] + 1) : NULL;
-		i = flags ? 1 : 0;
-		while (++i < 2)
-			display_directory(argv[i]);
+		ft_putendl((char*)files->content);
+		files = files->next;
 	}
-	if ((flags && argc == 2) || (!flags && argc == 1))
-		display_directory(".");
+}
+
+char 	*get_path(t_dir *parent, char *name)
+{
+	char *tmp;
+	char *new;
+
+	tmp = ft_strjoin(parent->p, "/");
+	new = ft_strjoin(tmp, name);
+	ft_memdel((void**)&tmp);
+	ft_memdel((void**)&name);
+	return (new);
+}
+
+t_dir	*get_dir(char *path)
+{
+	t_dir			*dir;
+	DIR				*dp;
+
+	if (!(dp = opendir(path)))
+		return (NULL);
+	dir = ft_memalloc(sizeof(t_dir));
+	dir->d = dp;
+	dir->p = path;
+	return (dir);
+}
+
+void 	recurse(t_dir *dir, t_queue *dirs)
+{
+	struct dirent 	*cur;
+	t_dir			*sub_dir;
+
+	while ((cur = readdir(dir->d)))
+	{
+		ft_lstadd(&dir->f, ft_lstnew(cur->d_name, sizeof(struct dirent)));
+		if ((sub_dir = get_dir(get_path(dir, cur->d_name))))
+		{
+			ft_enqueue(dirs, sub_dir, sizeof(t_dir));
+			recurse(sub_dir, dirs);
+			closedir(sub_dir->d);
+		}
+	}
+	closedir(dir->d);
+}
+
+void	ft_ls(t_ops *ops, char *path)
+{
+	t_queue		*dirs;
+	t_dir		*cur_dir;
+	
+	cur_dir = get_dir(path);
+	dirs = ft_queuenw(cur_dir, sizeof(t_dir));
+	if (ops->R)
+		recurse(cur_dir, dirs);
+	while ((cur_dir = ft_dequeue(dirs)))
+		display(cur_dir);
+}
+
+int	main(int argc, char **argv)
+{
+	t_ops	*ops;
+	int		i;
+
+	init_options(&ops);
+	if (!(i = parse_options(argv, argc, ops)))
+		return (-1);
+	while (i < argc)
+		ft_ls(ops, argv[i]);
 	return (0);
 }
