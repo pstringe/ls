@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/05/01 19:01:34 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/05/02 15:48:45 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int 	parse_options(char **args, int argn, t_ops *ops)
 	int	i;
 	int	j;
 	
+	if (argn == 1)
+		return (-1);
 	i = 0;
 	while (args[++i][0] == '-' && i < argn)
 	{
@@ -89,8 +91,8 @@ char 	*get_path(t_dir *parent, char *name)
 
 	tmp = ft_strjoin(parent->p, "/");
 	new = ft_strjoin(tmp, name);
-	ft_memdel((void**)&tmp);
-	ft_memdel((void**)&name);
+	//ft_memdel((void**)&tmp);
+	//ft_memdel((void**)&name);
 	return (new);
 }
 
@@ -107,7 +109,7 @@ t_dir	*get_dir(char *path)
 	return (dir);
 }
 
-void 	recurse(t_dir *dir, t_queue *dirs)
+void 	recurse(t_dir *dir, t_queue *dirs, t_ops *ops)
 {
 	struct dirent 	*cur;
 	t_dir			*sub_dir;
@@ -118,7 +120,8 @@ void 	recurse(t_dir *dir, t_queue *dirs)
 		if ((sub_dir = get_dir(get_path(dir, cur->d_name))))
 		{
 			ft_enqueue(dirs, sub_dir, sizeof(t_dir));
-			recurse(sub_dir, dirs);
+			if (ops->R)
+				recurse(sub_dir, dirs, ops);
 			closedir(sub_dir->d);
 		}
 	}
@@ -132,8 +135,7 @@ void	ft_ls(t_ops *ops, char *path)
 	
 	cur_dir = get_dir(path);
 	dirs = ft_queuenw(cur_dir, sizeof(t_dir));
-	if (ops->R)
-		recurse(cur_dir, dirs);
+	recurse(cur_dir, dirs, ops);
 	while ((cur_dir = ft_dequeue(dirs)))
 		display(cur_dir);
 }
@@ -147,6 +149,6 @@ int	main(int argc, char **argv)
 	if (!(i = parse_options(argv, argc, ops)))
 		return (-1);
 	while (i < argc)
-		ft_ls(ops, argv[i]);
+		ft_ls(ops, argv[i++]);
 	return (0);
 }
