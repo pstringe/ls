@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/05/03 11:19:16 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/05/03 11:36:05 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void	display(t_dir *dir)
 	t_list *files;
 
 	ft_putendl(dir->p);
+	ft_putendl("");
 	files = dir->f;
 	while (files)
 	{
@@ -112,6 +113,8 @@ t_dir		*is_dir(char *name, t_dir *parent, t_ops *ops)
 {
 	if (!strncmp(name, "..", ft_strlen(name)) || !strncmp(name, ".", ft_strlen(name)))
 		return (NULL);
+	if (name[0] == '.' && !ops->a)
+		return (NULL);
 	return (ops->R ? get_dir(get_path(parent, name)) : NULL);
 }
 
@@ -127,7 +130,6 @@ void 	recurse(t_dir *dir, t_queue *dirs, t_ops *ops)
 		{
 			ft_enqueue(dirs, sub_dir, sizeof(t_dir));
 			recurse(sub_dir, dirs, ops);
-			//closedir(sub_dir->d);
 		}
 	}
 	closedir(dir->d);
