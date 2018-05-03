@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/05/02 15:48:45 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/05/03 11:19:16 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int 	parse_options(char **args, int argn, t_ops *ops)
 	i = 0;
 	while (args[++i][0] == '-' && i < argn)
 	{
-		j = -1;
+		j = 0;
 		while (args[i][++j])
 		{
 			if (args[i][j] == 'l')
@@ -91,8 +91,7 @@ char 	*get_path(t_dir *parent, char *name)
 
 	tmp = ft_strjoin(parent->p, "/");
 	new = ft_strjoin(tmp, name);
-	//ft_memdel((void**)&tmp);
-	//ft_memdel((void**)&name);
+	ft_memdel((void**)&tmp);
 	return (new);
 }
 
@@ -109,6 +108,13 @@ t_dir	*get_dir(char *path)
 	return (dir);
 }
 
+t_dir		*is_dir(char *name, t_dir *parent, t_ops *ops)
+{
+	if (!strncmp(name, "..", ft_strlen(name)) || !strncmp(name, ".", ft_strlen(name)))
+		return (NULL);
+	return (ops->R ? get_dir(get_path(parent, name)) : NULL);
+}
+
 void 	recurse(t_dir *dir, t_queue *dirs, t_ops *ops)
 {
 	struct dirent 	*cur;
@@ -117,12 +123,11 @@ void 	recurse(t_dir *dir, t_queue *dirs, t_ops *ops)
 	while ((cur = readdir(dir->d)))
 	{
 		ft_lstadd(&dir->f, ft_lstnew(cur->d_name, sizeof(struct dirent)));
-		if ((sub_dir = get_dir(get_path(dir, cur->d_name))))
+		if ((sub_dir = is_dir(cur->d_name, dir, ops)))
 		{
 			ft_enqueue(dirs, sub_dir, sizeof(t_dir));
-			if (ops->R)
-				recurse(sub_dir, dirs, ops);
-			closedir(sub_dir->d);
+			recurse(sub_dir, dirs, ops);
+			//closedir(sub_dir->d);
 		}
 	}
 	closedir(dir->d);
