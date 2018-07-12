@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/05/03 11:36:05 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 11:00:36 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,19 +71,177 @@ int 	parse_options(char **args, int argn, t_ops *ops)
 	return (i);
 }
 
-void	display(t_dir *dir)
+int		lex(void *a, void *b, void **aux, int len)
 {
-	t_list *files;
+	const char 	*s1;
+	const char 	*s2;
+	size_t		l1;
+	size_t		l2;
 
-	ft_putendl(dir->p);
-	ft_putendl("");
-	files = dir->f;
-	while (files)
-	{
-		ft_putendl((char*)files->content);
-		files = files->next;
-	}
+	if (!aux || !len)
+		aux = NULL;
+	s1 = (const char*)a;
+	s2 = (const char*)b;
+	l1 = ft_strlen(s1);
+	l2 = ft_strlen(s2);
+	return(ft_strncmp(s1, s2, (l1 >= l2 ? l1 : l2)));
 }
+
+struct stat get_stats(const char *path, const char *file)
+{
+	struct stat	stats;
+	char		*tmp;
+
+	tmp = ft_strjoin(path, file);
+	lstat(tmp, &stats);
+	return (stats);
+}
+
+int		tim(void *a, void *b, void **aux, int len)
+{
+	
+	const char 	*s1;
+	const char 	*s2;
+	time_t		t1;
+	time_t		t2;
+
+	if (!aux || !len)
+		aux = NULL;
+	s1 = (const char*)a;
+	s2 = (const char*)b;
+	t1 = get_stats(NULL, s1).st_mtime;
+	t2 = get_stats(NULL, s2).st_mtime;
+	return(t1 < t2);
+}
+
+int		rev(void *a, void *b, void **aux, int len)
+{
+	const char 	*s1;
+	const char 	*s2;
+	size_t		l1;
+	size_t		l2;
+
+	if (!aux || !len)
+		aux = NULL;
+	s1 = (const char*)a;
+	s2 = (const char*)b;
+	l1 = ft_strlen(s1);
+	l2 = ft_strlen(s2);
+	return(ft_strncmp(s2, s1, (l1 >= l2 ? l1 : l2)));
+}
+
+void	output_type(mode_t m)
+{
+	if (m == S_IFREG)
+		ft_putchar('-');
+	else if (m == S_IFDIR)
+		ft_putchar('d');
+	else if (m == S_IFLNK)
+		ft_putchar('l');
+	else if (m == S_IFCHR)
+		ft_putchar('c');
+	else if (m == S_IFBLK)
+		ft_putchar('b');
+	else if (m == S_IFSOCK)
+		ft_putchar('s');
+	else if (m == S_IFIFO)
+		ft_putchar('s');
+}
+
+void	output_permissions(mode_t m)
+{
+    ft_putchar((m & S_IRUSR) ? 'r' : '-');
+    ft_putchar((m & S_IWUSR) ? 'w' : '-');
+    ft_putchar((m & S_IXUSR) ? 'x' : '-');
+    ft_putchar((m & S_IRGRP) ? 'r' : '-');
+    ft_putchar((m & S_IWGRP) ? 'w' : '-');
+    ft_putchar((m & S_IXGRP) ? 'x' : '-');
+    ft_putchar((m & S_IROTH) ? 'r' : '-');
+    ft_putchar((m & S_IWOTH) ? 'w' : '-');
+    ft_putchar((m & S_IXOTH) ? 'x' : '-');
+}
+
+void	output_time(time_t mod)
+{
+	//time_t		cur;
+	struct tm	*time;
+	
+	time = localtime(&mod);
+	ft_printf("%5d%2d %.2d:%.2d", time->tm_mon, time->tm_mday, time->tm_hour, time->tm_min);
+
+}
+
+void	output_name(const char *fn, mode_t mode)
+{
+	char buf[512];
+	int count;
+
+	if (mode & S_IFLNK)
+	{
+		count = readlink(fn, buf, 512);
+		if (count >= 0)
+		{
+			buf[count] = '\0';
+			ft_printf(" %s -> %s\n", fn, buf);
+		}
+		return ;
+	}
+	else
+		ft_printf(" %s\n", fn);
+}
+
+void	output_stats(char *file, void **aux)
+{
+	struct stat		stats;
+	t_ops			*ops;
+	char 			*path;
+	//char			*tmp;
+
+	ops = (t_ops*)*aux;
+	path = (char*)aux + 1;
+	if (!ops->l)
+		ft_printf("%s\n", file);
+	else
+		stats = get_stats(path, file);
+	output_type(stats.st_mode);
+	output_permissions(stats.st_mode);
+	ft_printf(" %d", stats.st_nlink);
+	ft_printf("%10s", getpwuid(stats.st_uid)->pw_name);
+	ft_printf("%10s", getgrgid(stats.st_gid)->gr_name);
+	ft_printf("%10ld ", (long)stats.st_size);
+	output_time(stats.st_mtime);
+	output_name(file, stats.st_mode);
+}
+
+void	output_dir(char *path, t_ops *ops)
+{
+	DIR*	dpntr;	
+	struct 	dirent *dp;
+	void	*aux[2];	
+	t_list 	*dlst;
+
+	dpntr = opendir(path);
+	dp = readdir(dpntr);
+	dlst = NULL;
+	while (dp)
+	{
+		if (!(!ops->a && dp->d_name[0] =='.'))
+			ft_lstadd(&dlst, ft_lstnew(dp->d_name, ft_strlen(dp->d_name)));
+		dp = readdir(dpntr);
+	}
+	aux[0] = (void*)ops;
+	aux[1] = (void*)path;
+	if (!ops->t && !ops->r)
+		ft_lstsort(dlst, lex, aux, 2);
+	else if (ops->r)
+		ft_lstsort(dlst, rev, aux, 2);
+	else if (ops->t)
+		ft_lstsort(dlst, tim, aux, 2);
+	ft_lstforeach(dlst, output_stats, aux, 2);
+	closedir(dpntr);
+}
+
+
 
 char 	*get_path(t_dir *parent, char *name)
 {
@@ -96,6 +254,7 @@ char 	*get_path(t_dir *parent, char *name)
 	return (new);
 }
 
+/*
 t_dir	*get_dir(char *path)
 {
 	t_dir			*dir;
@@ -134,9 +293,13 @@ void 	recurse(t_dir *dir, t_queue *dirs, t_ops *ops)
 	}
 	closedir(dir->d);
 }
+*/
 
-void	ft_ls(t_ops *ops, char *path)
+void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 {
+	int 		no_of_dirs;
+	int			i;
+	/*
 	t_queue		*dirs;
 	t_dir		*cur_dir;
 	
@@ -145,6 +308,20 @@ void	ft_ls(t_ops *ops, char *path)
 	recurse(cur_dir, dirs, ops);
 	while ((cur_dir = ft_dequeue(dirs)))
 		display(cur_dir);
+	*/
+	no_of_dirs = argc - idx;
+	if (!ops->R && !no_of_dirs)
+		output_dir(".", ops);
+	i = idx - 1;
+	while (no_of_dirs--)
+		output_dir(argv[++i], ops);
+	/*
+	if (ops->R)
+	{
+		recurse(".", ops);
+		return ;
+	}
+	*/
 }
 
 int	main(int argc, char **argv)
@@ -155,7 +332,6 @@ int	main(int argc, char **argv)
 	init_options(&ops);
 	if (!(i = parse_options(argv, argc, ops)))
 		return (-1);
-	while (i < argc)
-		ft_ls(ops, argv[i++]);
+	ft_ls(ops, argv, argc, i);
 	return (0);
 }

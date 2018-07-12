@@ -1,4 +1,4 @@
-CC = gcc
+C = gcc
 INC = ./libft
 NAME = ft_ls
 SRCS = ft_ls.c
