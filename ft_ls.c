@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 11:00:36 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 15:10:23 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,18 +195,20 @@ void	output_stats(char *file, void **aux)
 	struct stat		stats;
 	t_ops			*ops;
 	char 			*path;
+	struct passwd	*tmp_pw;
+
 	//char			*tmp;
 
 	ops = (t_ops*)*aux;
 	path = (char*)aux + 1;
 	if (!ops->l)
 		ft_printf("%s\n", file);
-	else
-		stats = get_stats(path, file);
+	stats = get_stats(path, file);
 	output_type(stats.st_mode);
 	output_permissions(stats.st_mode);
 	ft_printf(" %d", stats.st_nlink);
-	ft_printf("%10s", getpwuid(stats.st_uid)->pw_name);
+	tmp_pw = getpwuid(stats.st_uid);
+	printf("%10s", tmp_pw->pw_name);
 	ft_printf("%10s", getgrgid(stats.st_gid)->gr_name);
 	ft_printf("%10ld ", (long)stats.st_size);
 	output_time(stats.st_mtime);
@@ -309,7 +311,7 @@ void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 	while ((cur_dir = ft_dequeue(dirs)))
 		display(cur_dir);
 	*/
-	no_of_dirs = argc - idx;
+	no_of_dirs = argc - (idx < 0 ? 1 : idx);
 	if (!ops->R && !no_of_dirs)
 		output_dir(".", ops);
 	i = idx - 1;
