@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 15:10:23 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 15:41:15 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int 	parse_options(char **args, int argn, t_ops *ops)
 	if (argn == 1)
 		return (-1);
 	i = 0;
-	while (args[++i][0] == '-' && i < argn)
+	while (++i < argn && args[i][0] == '-')
 	{
 		j = 0;
 		while (args[i][++j])
@@ -203,16 +203,19 @@ void	output_stats(char *file, void **aux)
 	path = (char*)aux + 1;
 	if (!ops->l)
 		ft_printf("%s\n", file);
-	stats = get_stats(path, file);
-	output_type(stats.st_mode);
-	output_permissions(stats.st_mode);
-	ft_printf(" %d", stats.st_nlink);
-	tmp_pw = getpwuid(stats.st_uid);
-	printf("%10s", tmp_pw->pw_name);
-	ft_printf("%10s", getgrgid(stats.st_gid)->gr_name);
-	ft_printf("%10ld ", (long)stats.st_size);
-	output_time(stats.st_mtime);
-	output_name(file, stats.st_mode);
+	else
+	{
+		stats = get_stats(path, file);
+		output_type(stats.st_mode);
+		output_permissions(stats.st_mode);
+		ft_printf(" %d", stats.st_nlink);
+		tmp_pw = getpwuid(stats.st_uid);
+		printf("%10s", tmp_pw->pw_name);
+		ft_printf("%10s", getgrgid(stats.st_gid)->gr_name);
+		ft_printf("%10ld ", (long)stats.st_size);
+		output_time(stats.st_mtime);
+		output_name(file, stats.st_mode);
+	}
 }
 
 void	output_dir(char *path, t_ops *ops)
