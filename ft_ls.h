@@ -6,13 +6,14 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 19:31:04 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/11 14:49:44 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 13:37:39 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LS_H
 # define FT_LS_H
 # include "libft.h"
+# include "ft_printf.h"
 # include <stdarg.h>
 # include <assert.h>
 # include <sys/stat.h>
