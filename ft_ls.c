@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 15:41:15 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 16:56:29 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,17 @@ int 	parse_options(char **args, int argn, t_ops *ops)
 	return (i);
 }
 
+char 	*get_path(char *parent, char *name)
+{
+	char *tmp;
+	char *new;
+
+	tmp = ft_strjoin(parent, "/");
+	new = ft_strjoin(tmp, name);
+	ft_memdel((void**)&tmp);
+	return (new);
+}
+
 int		lex(void *a, void *b, void **aux, int len)
 {
 	const char 	*s1;
@@ -87,30 +98,28 @@ int		lex(void *a, void *b, void **aux, int len)
 	return(ft_strncmp(s1, s2, (l1 >= l2 ? l1 : l2)));
 }
 
-struct stat get_stats(const char *path, const char *file)
+struct stat get_stats(const char *path)
 {
 	struct stat	stats;
-	char		*tmp;
 
-	tmp = ft_strjoin(path, file);
-	lstat(tmp, &stats);
+	lstat(path, &stats);
 	return (stats);
 }
 
 int		tim(void *a, void *b, void **aux, int len)
 {
 	
-	const char 	*s1;
-	const char 	*s2;
+	char 	*s1;
+	char 	*s2;
 	time_t		t1;
 	time_t		t2;
 
 	if (!aux || !len)
 		aux = NULL;
-	s1 = (const char*)a;
-	s2 = (const char*)b;
-	t1 = get_stats(NULL, s1).st_mtime;
-	t2 = get_stats(NULL, s2).st_mtime;
+	s1 = (char*)a;
+	s2 = (char*)b;
+	t1 = get_stats(get_path((char*)aux[1], s1)).st_mtime;
+	t2 = get_stats(get_path((char*)aux[1], s2)).st_mtime;
 	return(t1 < t2);
 }
 
@@ -167,7 +176,7 @@ void	output_time(time_t mod)
 	struct tm	*time;
 	
 	time = localtime(&mod);
-	ft_printf("%5d%2d %.2d:%.2d", time->tm_mon, time->tm_mday, time->tm_hour, time->tm_min);
+	ft_printf("%5d%2d %.2d:%.2d\n", time->tm_mon, time->tm_mday, time->tm_hour, time->tm_min);
 
 }
 
@@ -200,12 +209,12 @@ void	output_stats(char *file, void **aux)
 	//char			*tmp;
 
 	ops = (t_ops*)*aux;
-	path = (char*)aux + 1;
+	path = (char*)get_path(aux[1], file);
 	if (!ops->l)
 		ft_printf("%s\n", file);
 	else
 	{
-		stats = get_stats(path, file);
+		stats = get_stats(path);
 		output_type(stats.st_mode);
 		output_permissions(stats.st_mode);
 		ft_printf(" %d", stats.st_nlink);
@@ -248,16 +257,6 @@ void	output_dir(char *path, t_ops *ops)
 
 
 
-char 	*get_path(t_dir *parent, char *name)
-{
-	char *tmp;
-	char *new;
-
-	tmp = ft_strjoin(parent->p, "/");
-	new = ft_strjoin(tmp, name);
-	ft_memdel((void**)&tmp);
-	return (new);
-}
 
 /*
 t_dir	*get_dir(char *path)
