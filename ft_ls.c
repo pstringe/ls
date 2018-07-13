@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 16:56:29 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 17:28:53 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,8 @@ void	output_type(mode_t m)
 
 void	output_permissions(mode_t m)
 {
-    ft_putchar((m & S_IRUSR) ? 'r' : '-');
+    ft_putchar((m & S_IFDIR) ? 'd' : '-');
+	ft_putchar((m & S_IRUSR) ? 'r' : '-');
     ft_putchar((m & S_IWUSR) ? 'w' : '-');
     ft_putchar((m & S_IXUSR) ? 'x' : '-');
     ft_putchar((m & S_IRGRP) ? 'r' : '-');
