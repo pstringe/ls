@@ -6,18 +6,11 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/13 10:21:38 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/13 10:36:45 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-
-typedef struct	s_dir
-{
-	char			*p;
-	DIR				*d;
-	t_list			*f;
-}				t_dir;
 
 typedef struct	s_ops
 {
@@ -205,7 +198,6 @@ char	*get_month(int d)
 }
 void	output_time(time_t mod)
 {
-	//time_t		cur;
 	struct tm	*time;
 	
 	time = localtime(&mod);
@@ -237,8 +229,6 @@ void	output_stats(char *file, void **aux)
 	struct stat		stats;
 	t_ops			*ops;
 	char 			*path;
-
-	//char			*tmp;
 
 	ops = (t_ops*)*aux;
 	path = (char*)get_path(aux[1], file);
@@ -286,30 +276,6 @@ void	output_dir(char *path, t_ops *ops)
 	closedir(dpntr);
 }
 
-/*
-t_dir	*get_dir(char *path)
-{
-	t_dir			*dir;
-	DIR				*dp;
-
-	if (!(dp = opendir(path)))
-		return (NULL);
-	dir = ft_memalloc(sizeof(t_dir));
-	dir->d = dp;
-	dir->p = path;
-	return (dir);
-}
-
-char	*is_dir(char *dir, t_ops *ops)
-{
-	if (!strncmp(name, "..", ft_strlen(name)) || !strncmp(name, ".", ft_strlen(name)))
-		return (NULL);
-	if (name[0] == '.' && !ops->a)
-		return (NULL);
-	return (ops->R ? get_path(parent, name) : NULL);
-}
-*/
-
 void 	recurse(char *dir, t_ops *ops)
 {
 	DIR				*dpntr;
@@ -331,32 +297,18 @@ void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 {
 	int 		no_of_dirs;
 	int			i;
-	/*
-	t_queue		*dirs;
-	t_dir		*cur_dir;
 	
-	cur_dir = get_dir(path);
-	dirs = ft_queuenw(cur_dir, sizeof(t_dir));
-	recurse(cur_dir, dirs, ops);
-	while ((cur_dir = ft_dequeue(dirs)))
-		display(cur_dir);
-	*/
 	no_of_dirs = argc - (idx < 0 ? 1 : idx);
 	if (!ops->R && !no_of_dirs)
 		output_dir(".", ops);
+	if (ops->R && !no_of_dirs)
+		recurse(".", ops);
 	i = idx - 1;
 	while (no_of_dirs-- > 0)
 		if (!ops->R)
 			output_dir(argv[++i], ops);
 		else
 			recurse(argv[++i], ops);
-	/*
-	if (ops->R)
-	{
-		recurse(".", ops);
-		return ;
-	}
-	*/
 }
 
 int	main(int argc, char **argv)
