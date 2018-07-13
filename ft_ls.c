@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 17:28:53 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 17:57:30 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,7 @@ void	output_time(time_t mod)
 	struct tm	*time;
 	
 	time = localtime(&mod);
-	ft_printf("%5d%2d %.2d:%.2d\n", time->tm_mon, time->tm_mday, time->tm_hour, time->tm_min);
+	ft_printf("%5d%2d %.2d:%.2d", time->tm_mon, time->tm_mday, time->tm_hour, time->tm_min);
 
 }
 
@@ -193,11 +193,11 @@ void	output_name(const char *fn, mode_t mode)
 		{
 			buf[count] = '\0';
 			ft_printf(" %s -> %s\n", fn, buf);
+			return ;
 		}
-		return ;
+		else
+			ft_printf(" %s\n", fn);
 	}
-	else
-		ft_printf(" %s\n", fn);
 }
 
 void	output_stats(char *file, void **aux)
@@ -205,7 +205,6 @@ void	output_stats(char *file, void **aux)
 	struct stat		stats;
 	t_ops			*ops;
 	char 			*path;
-	struct passwd	*tmp_pw;
 
 	//char			*tmp;
 
@@ -219,9 +218,7 @@ void	output_stats(char *file, void **aux)
 		output_type(stats.st_mode);
 		output_permissions(stats.st_mode);
 		ft_printf(" %d", stats.st_nlink);
-		tmp_pw = getpwuid(stats.st_uid);
-		printf("%10s", tmp_pw->pw_name);
-		ft_printf("%10s", getgrgid(stats.st_gid)->gr_name);
+		ft_printf("%10s %10s", getpwuid(stats.st_uid)->pw_name, getgrgid(stats.st_gid)->gr_name);
 		ft_printf("%10ld ", (long)stats.st_size);
 		output_time(stats.st_mtime);
 		output_name(file, stats.st_mode);
