@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 18:28:50 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 18:46:03 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,13 +171,45 @@ void	output_permissions(mode_t m)
     ft_putchar((m & S_IXOTH) ? 'x' : '-');
 }
 
+char	*get_month(int d)
+{
+	char *m;
+
+	if (d == 0)
+		m = "Jan";
+	else if (d == 1)
+		m = "Feb";
+	else if (d == 2)
+		m = "Mar";
+	else if (d == 3)
+		m = "Apr";
+	else if (d == 4)
+		m = "May";
+	else if (d == 5)
+		m = "Jun";
+	else if (d == 6)
+		m = "Jul";
+	else if (d == 7)
+		m = "Aug";
+	else if (d == 8)
+		m = "Sept";
+	else if (d == 9)
+		m = "Oct";
+	else if (d == 10)
+		m = "Nov";
+	else if (d == 11)
+		m = "Dec";
+	else
+		m = NULL;
+	return (m);
+}
 void	output_time(time_t mod)
 {
 	//time_t		cur;
 	struct tm	*time;
 	
 	time = localtime(&mod);
-	ft_printf("%5d%2d %.2d:%.2d", time->tm_mon, time->tm_mday, time->tm_hour, time->tm_min);
+	ft_printf("%4s %2d %.2d:%.2d", get_month(time->tm_mon), time->tm_mday, time->tm_hour, time->tm_min);
 
 }
 
