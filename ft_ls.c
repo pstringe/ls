@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 17:57:30 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/12 18:28:50 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -181,12 +181,12 @@ void	output_time(time_t mod)
 
 }
 
-void	output_name(const char *fn, mode_t mode)
+void	output_name(const char *fn, mode_t m)
 {
 	char buf[512];
 	int count;
 
-	if (mode & S_IFLNK)
+	if (m & S_IFLNK || m & S_IFDIR)
 	{
 		count = readlink(fn, buf, 512);
 		if (count >= 0)
