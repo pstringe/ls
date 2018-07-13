@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/12 18:46:03 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/13 10:21:38 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -259,12 +259,13 @@ void	output_stats(char *file, void **aux)
 
 void	output_dir(char *path, t_ops *ops)
 {
-	DIR*	dpntr;	
-	struct 	dirent *dp;
-	void	*aux[2];	
-	t_list 	*dlst;
+	DIR				*dpntr;	
+	struct dirent 	*dp;
+	void			*aux[2];	
+	t_list 			*dlst;
 
-	dpntr = opendir(path);
+	if (!(dpntr = opendir(path)))
+		return ;
 	dp = readdir(dpntr);
 	dlst = NULL;
 	while (dp)
@@ -285,9 +286,6 @@ void	output_dir(char *path, t_ops *ops)
 	closedir(dpntr);
 }
 
-
-
-
 /*
 t_dir	*get_dir(char *path)
 {
@@ -302,32 +300,32 @@ t_dir	*get_dir(char *path)
 	return (dir);
 }
 
-t_dir		*is_dir(char *name, t_dir *parent, t_ops *ops)
+char	*is_dir(char *dir, t_ops *ops)
 {
 	if (!strncmp(name, "..", ft_strlen(name)) || !strncmp(name, ".", ft_strlen(name)))
 		return (NULL);
 	if (name[0] == '.' && !ops->a)
 		return (NULL);
-	return (ops->R ? get_dir(get_path(parent, name)) : NULL);
-}
-
-void 	recurse(t_dir *dir, t_queue *dirs, t_ops *ops)
-{
-	struct dirent 	*cur;
-	t_dir			*sub_dir;
-
-	while ((cur = readdir(dir->d)))
-	{
-		ft_lstadd(&dir->f, ft_lstnew(cur->d_name, sizeof(struct dirent)));
-		if ((sub_dir = is_dir(cur->d_name, dir, ops)))
-		{
-			ft_enqueue(dirs, sub_dir, sizeof(t_dir));
-			recurse(sub_dir, dirs, ops);
-		}
-	}
-	closedir(dir->d);
+	return (ops->R ? get_path(parent, name) : NULL);
 }
 */
+
+void 	recurse(char *dir, t_ops *ops)
+{
+	DIR				*dpntr;
+	struct dirent 	*cur;
+	char 			*sub_dir;
+
+	ft_printf("\n%s\n\n", dir);
+	output_dir(dir, ops);
+	dpntr = opendir(dir);
+	while ((cur = readdir(dpntr)))
+	{
+		output_dir((sub_dir = get_path(dir, cur->d_name)), ops);
+		recurse(sub_dir, ops);
+	}
+	closedir(dpntr);
+}
 
 void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 {
@@ -347,8 +345,11 @@ void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 	if (!ops->R && !no_of_dirs)
 		output_dir(".", ops);
 	i = idx - 1;
-	while (no_of_dirs--)
-		output_dir(argv[++i], ops);
+	while (no_of_dirs-- > 0)
+		if (!ops->R)
+			output_dir(argv[++i], ops);
+		else
+			recurse(argv[++i], ops);
 	/*
 	if (ops->R)
 	{
