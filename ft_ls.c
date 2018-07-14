@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/14 10:18:11 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/14 11:02:49 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -264,7 +264,7 @@ void	output_dir(char *path, t_ops *ops)
 		return ;
 	dp = readdir(dpntr);
 	dlst = NULL;
-	if (ops->R && (!ops->a && dp->d_name[0] =='.'))	
+	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))	
 		ft_printf("\n%s\n\n", path);
 	while (dp)
 	{
@@ -285,26 +285,42 @@ void	output_dir(char *path, t_ops *ops)
 	closedir(dpntr);
 }
 
-int		can_recurse(char *file)
+int		can_output(char *file, t_ops *ops)
+{
+	int 	l;
+	int 	hidden;
+	int 	cur_dir;
+
+	l = ft_strlen(file);
+	cur_dir = !ft_strncmp(file, ".", l);
+	hidden = !cur_dir && (strrchr(file, '.') > strrchr(file, '/'));
+	return ((!ops->a && (!hidden || cur_dir)) || ops->a);
+}
+
+int		can_recurse(char *file, t_ops *ops)
 {
 	int		l;
 
 	l = ft_strlen(file);
-	return (ft_strncmp(file, ".", l) && ft_strncmp(file, "..", l));
+	return (can_output(file, ops) && ft_strncmp(file, ".", l) && ft_strncmp(file, "..", l));
 }
+
 void 	recurse(char *dir, t_ops *ops)
 {
 	DIR				*dpntr;
 	struct dirent 	*cur;
 	char 			*subdir;
 
-	output_dir(dir, ops);
+	if (can_output(dir, ops))
+		output_dir(dir, ops);
 	dpntr = opendir(dir);
 	while (dpntr && (cur = readdir(dpntr)))
 	{
-		if (can_recurse(cur->d_name))
+		if (can_recurse(cur->d_name, ops))
 		{
 			subdir = get_path(dir, cur->d_name);
+			if (!opendir(subdir))
+				continue ;
 			recurse(subdir, ops);
 		}
 	}
