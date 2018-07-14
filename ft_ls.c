@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/14 11:02:49 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/14 12:55:24 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,13 +106,18 @@ int		tim(void *a, void *b, void **aux, int len)
 	char 	*s2;
 	time_t		t1;
 	time_t		t2;
+	char		*p;
 
 	if (!aux || !len)
 		aux = NULL;
 	s1 = (char*)a;
 	s2 = (char*)b;
-	t1 = get_stats(get_path((char*)aux[1], s1)).st_mtime;
-	t2 = get_stats(get_path((char*)aux[1], s2)).st_mtime;
+	p = get_path((char*)aux[1], s1);
+	t1 = get_stats(p).st_mtime;
+	ft_memdel((void**)&p);
+	p = get_path((char*)aux[1], s2);
+	t2 = get_stats(p).st_mtime;
+	ft_memdel((void**)&p);
 	return(t1 < t2);
 }
 
@@ -246,6 +251,7 @@ void	output_stats(char *file, void **aux)
 		output_time(stats.st_mtime);
 		output_name(file, stats.st_mode);
 	}
+	ft_memdel((void**)&path);
 }
 
 /*
@@ -320,10 +326,16 @@ void 	recurse(char *dir, t_ops *ops)
 		{
 			subdir = get_path(dir, cur->d_name);
 			if (!opendir(subdir))
+			{
+				ft_memdel((void**)&subdir);
 				continue ;
+			}
 			recurse(subdir, ops);
+			ft_memdel((void**)&subdir);
 		}
 	}
+	if (cur)
+		ft_memdel((void**)&cur);
 	if (dpntr)
 		closedir(dpntr);
 }
@@ -355,6 +367,6 @@ int	main(int argc, char **argv)
 	if (!(i = parse_options(argv, argc, ops)))
 		return (-1);
 	ft_ls(ops, argv, argc, i);
-
+	ft_memdel((void**)&ops);
 	return (0);
 }
