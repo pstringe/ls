@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/13 10:36:45 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/14 10:18:11 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,8 @@ void	output_type(mode_t m)
 
 void	output_permissions(mode_t m)
 {
-    ft_putchar((m & S_IFDIR) ? 'd' : '-');
+    ft_putchar((m & S_IFCHR) ? 'c' : '-');
+	ft_putchar((m & S_IFDIR) ? 'd' : '-');
 	ft_putchar((m & S_IRUSR) ? 'r' : '-');
     ft_putchar((m & S_IWUSR) ? 'w' : '-');
     ft_putchar((m & S_IXUSR) ? 'x' : '-');
@@ -241,11 +242,16 @@ void	output_stats(char *file, void **aux)
 		output_permissions(stats.st_mode);
 		ft_printf(" %d", stats.st_nlink);
 		ft_printf("%10s %10s", getpwuid(stats.st_uid)->pw_name, getgrgid(stats.st_gid)->gr_name);
-		ft_printf("%10ld ", (long)stats.st_size);
+		ft_printf("%10d ", stats.st_size);
 		output_time(stats.st_mtime);
 		output_name(file, stats.st_mode);
 	}
 }
+
+/*
+**	given a directory, extracts filnames and prints relvant information in propper order
+**	depending on the specified options
+*/
 
 void	output_dir(char *path, t_ops *ops)
 {
@@ -258,6 +264,8 @@ void	output_dir(char *path, t_ops *ops)
 		return ;
 	dp = readdir(dpntr);
 	dlst = NULL;
+	if (ops->R && (!ops->a && dp->d_name[0] =='.'))	
+		ft_printf("\n%s\n\n", path);
 	while (dp)
 	{
 		if (!(!ops->a && dp->d_name[0] =='.'))
@@ -273,24 +281,35 @@ void	output_dir(char *path, t_ops *ops)
 	else if (ops->t)
 		ft_lstsort(dlst, tim, aux, 2);
 	ft_lstforeach(dlst, output_stats, aux, 2);
+	ft_lstdstry(&dlst, NULL);
 	closedir(dpntr);
 }
 
+int		can_recurse(char *file)
+{
+	int		l;
+
+	l = ft_strlen(file);
+	return (ft_strncmp(file, ".", l) && ft_strncmp(file, "..", l));
+}
 void 	recurse(char *dir, t_ops *ops)
 {
 	DIR				*dpntr;
 	struct dirent 	*cur;
-	char 			*sub_dir;
+	char 			*subdir;
 
-	ft_printf("\n%s\n\n", dir);
 	output_dir(dir, ops);
 	dpntr = opendir(dir);
-	while ((cur = readdir(dpntr)))
+	while (dpntr && (cur = readdir(dpntr)))
 	{
-		output_dir((sub_dir = get_path(dir, cur->d_name)), ops);
-		recurse(sub_dir, ops);
+		if (can_recurse(cur->d_name))
+		{
+			subdir = get_path(dir, cur->d_name);
+			recurse(subdir, ops);
+		}
 	}
-	closedir(dpntr);
+	if (dpntr)
+		closedir(dpntr);
 }
 
 void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
@@ -320,5 +339,6 @@ int	main(int argc, char **argv)
 	if (!(i = parse_options(argv, argc, ops)))
 		return (-1);
 	ft_ls(ops, argv, argc, i);
+
 	return (0);
 }
