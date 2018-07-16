@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/14 12:55:24 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/16 15:04:35 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,26 +139,32 @@ int		rev(void *a, void *b, void **aux, int len)
 
 void	output_type(mode_t m)
 {
-	if (m == S_IFREG)
+	if (m & S_IFREG)
 		ft_putchar('-');
-	else if (m == S_IFDIR)
+	else if (m & S_IFDIR)
 		ft_putchar('d');
-	else if (m == S_IFLNK)
+	else if (m & S_IFLNK)
 		ft_putchar('l');
-	else if (m == S_IFCHR)
+	else if (m & S_IFCHR)
 		ft_putchar('c');
-	else if (m == S_IFBLK)
+	else if (m & S_IFBLK)
 		ft_putchar('b');
-	else if (m == S_IFSOCK)
+	else if (m & S_IFSOCK)
 		ft_putchar('s');
-	else if (m == S_IFIFO)
+	else if (m & S_IFIFO)
 		ft_putchar('s');
 }
 
 void	output_permissions(mode_t m)
 {
-    ft_putchar((m & S_IFCHR) ? 'c' : '-');
-	ft_putchar((m & S_IFDIR) ? 'd' : '-');
+	/*
+	if (m & S_IFCHR)
+    	ft_putchar('c');
+	else if (m & S_IFDIR) 
+		ft_putchar('d');
+	else
+		ft_putchar('-');
+		*/
 	ft_putchar((m & S_IRUSR) ? 'r' : '-');
     ft_putchar((m & S_IWUSR) ? 'w' : '-');
     ft_putchar((m & S_IXUSR) ? 'x' : '-');
@@ -207,7 +213,7 @@ void	output_time(time_t mod)
 	struct tm	*time;
 	
 	time = localtime(&mod);
-	ft_printf("%4s %2d %.2d:%.2d", get_month(time->tm_mon), time->tm_mday, time->tm_hour, time->tm_min);
+	printf("%4s %2d %.2d:%.2d", get_month(time->tm_mon), time->tm_mday, time->tm_hour, time->tm_min);
 
 }
 
@@ -222,11 +228,12 @@ void	output_name(const char *fn, mode_t m)
 		if (count >= 0)
 		{
 			buf[count] = '\0';
-			ft_printf(" %s -> %s\n", fn, buf);
+			printf(" %s -> %s\n", fn, buf);
+			ft_bzero(buf, count);
 			return ;
 		}
 		else
-			ft_printf(" %s\n", fn);
+			printf(" %s\n", fn);
 	}
 }
 
@@ -235,19 +242,23 @@ void	output_stats(char *file, void **aux)
 	struct stat		stats;
 	t_ops			*ops;
 	char 			*path;
+	char 			*pw;
+	char			*gw;
 
 	ops = (t_ops*)*aux;
 	path = (char*)get_path(aux[1], file);
 	if (!ops->l)
-		ft_printf("%s\n", file);
+		printf("%s\n", file);
 	else
 	{
+		pw = getpwuid(stats.st_uid) ? getpwuid(stats.st_uid)->pw_name : NULL;
+		gw = getgrgid(stats.st_gid) ? getgrgid(stats.st_gid)->gr_name: NULL;
 		stats = get_stats(path);
 		output_type(stats.st_mode);
 		output_permissions(stats.st_mode);
-		ft_printf(" %d", stats.st_nlink);
-		ft_printf("%10s %10s", getpwuid(stats.st_uid)->pw_name, getgrgid(stats.st_gid)->gr_name);
-		ft_printf("%10d ", stats.st_size);
+		printf(" %d", stats.st_nlink);
+		printf("%10s %10s", pw, gw);
+		printf("%10lld ", stats.st_size);
 		output_time(stats.st_mtime);
 		output_name(file, stats.st_mode);
 	}
@@ -271,7 +282,7 @@ void	output_dir(char *path, t_ops *ops)
 	dp = readdir(dpntr);
 	dlst = NULL;
 	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))	
-		ft_printf("\n%s\n\n", path);
+		printf("\n%s\n\n", path);
 	while (dp)
 	{
 		if (!(!ops->a && dp->d_name[0] =='.'))
@@ -334,6 +345,8 @@ void 	recurse(char *dir, t_ops *ops)
 			ft_memdel((void**)&subdir);
 		}
 	}
+	if (dir)
+		ft_memdel((void**)&cur);
 	if (cur)
 		ft_memdel((void**)&cur);
 	if (dpntr)
