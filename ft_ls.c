@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/17 10:14:13 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/17 10:22:11 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,18 +214,18 @@ void	output_name(const char *fn, mode_t m)
 	char buf[512];
 	int count;
 
-	if (m & S_IFLNK || m & S_IFDIR)
+	if (m & S_IFLNK)
 	{
 		count = readlink(fn, buf, 512);
 		if (count >= 0)
 		{
 			buf[count] = '\0';
-			ft_printf(" %s -> %s\n", fn, buf);
+			ft_printf(" %s -> %s\n", ft_strrchr(fn, '/') + 1, buf);
 			ft_bzero(buf, count);
 			return ;
 		}
 		else
-			ft_printf(" %s\n", fn);
+			ft_printf(" %s\n", ft_strrchr(fn, '/') + 1);
 	}
 }
 
