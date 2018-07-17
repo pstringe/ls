@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/16 15:04:35 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/17 09:10:38 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,14 +157,6 @@ void	output_type(mode_t m)
 
 void	output_permissions(mode_t m)
 {
-	/*
-	if (m & S_IFCHR)
-    	ft_putchar('c');
-	else if (m & S_IFDIR) 
-		ft_putchar('d');
-	else
-		ft_putchar('-');
-		*/
 	ft_putchar((m & S_IRUSR) ? 'r' : '-');
     ft_putchar((m & S_IWUSR) ? 'w' : '-');
     ft_putchar((m & S_IXUSR) ? 'x' : '-');
@@ -213,7 +205,7 @@ void	output_time(time_t mod)
 	struct tm	*time;
 	
 	time = localtime(&mod);
-	printf("%4s %2d %.2d:%.2d", get_month(time->tm_mon), time->tm_mday, time->tm_hour, time->tm_min);
+	ft_printf("%4s %2d %.2d:%.2d", get_month(time->tm_mon), time->tm_mday, time->tm_hour, time->tm_min);
 
 }
 
@@ -228,12 +220,12 @@ void	output_name(const char *fn, mode_t m)
 		if (count >= 0)
 		{
 			buf[count] = '\0';
-			printf(" %s -> %s\n", fn, buf);
+			ft_printf(" %s -> %s\n", fn, buf);
 			ft_bzero(buf, count);
 			return ;
 		}
 		else
-			printf(" %s\n", fn);
+			ft_printf(" %s\n", fn);
 	}
 }
 
@@ -248,17 +240,19 @@ void	output_stats(char *file, void **aux)
 	ops = (t_ops*)*aux;
 	path = (char*)get_path(aux[1], file);
 	if (!ops->l)
-		printf("%s\n", file);
+		ft_printf("%s\n", file);
 	else
 	{
-		pw = getpwuid(stats.st_uid) ? getpwuid(stats.st_uid)->pw_name : NULL;
-		gw = getgrgid(stats.st_gid) ? getgrgid(stats.st_gid)->gr_name: NULL;
 		stats = get_stats(path);
+		pw = getpwuid(stats.st_uid) ? getpwuid(stats.st_uid)->pw_name : NULL;
+		if (!pw)
+			ft_printf("path: %s\nuid: %d\n", path, stats.st_uid);
+		gw = getgrgid(stats.st_gid) ? getgrgid(stats.st_gid)->gr_name: NULL;
 		output_type(stats.st_mode);
 		output_permissions(stats.st_mode);
-		printf(" %d", stats.st_nlink);
-		printf("%10s %10s", pw, gw);
-		printf("%10lld ", stats.st_size);
+		ft_printf(" %d", stats.st_nlink);
+		ft_printf("%10s %10s", pw, gw);
+		ft_printf("%10lld ", stats.st_size);
 		output_time(stats.st_mtime);
 		output_name(file, stats.st_mode);
 	}
@@ -286,7 +280,7 @@ void	output_dir(char *path, t_ops *ops)
 	while (dp)
 	{
 		if (!(!ops->a && dp->d_name[0] =='.'))
-			ft_lstadd(&dlst, ft_lstnew(dp->d_name, ft_strlen(dp->d_name)));
+			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
 		dp = readdir(dpntr);
 	}
 	aux[0] = (void*)ops;
