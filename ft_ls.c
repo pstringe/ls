@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/17 09:10:38 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/17 10:14:13 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,14 +141,14 @@ void	output_type(mode_t m)
 {
 	if (m & S_IFREG)
 		ft_putchar('-');
-	else if (m & S_IFDIR)
-		ft_putchar('d');
-	else if (m & S_IFLNK)
-		ft_putchar('l');
 	else if (m & S_IFCHR)
 		ft_putchar('c');
 	else if (m & S_IFBLK)
 		ft_putchar('b');
+	else if (m & S_IFDIR)
+		ft_putchar('d');
+	else if (m & S_IFLNK)
+		ft_putchar('l');
 	else if (m & S_IFSOCK)
 		ft_putchar('s');
 	else if (m & S_IFIFO)
@@ -254,7 +254,7 @@ void	output_stats(char *file, void **aux)
 		ft_printf("%10s %10s", pw, gw);
 		ft_printf("%10lld ", stats.st_size);
 		output_time(stats.st_mtime);
-		output_name(file, stats.st_mode);
+		output_name(path, stats.st_mode);
 	}
 	ft_memdel((void**)&path);
 }
