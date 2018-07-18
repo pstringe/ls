@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/18 13:54:25 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/18 14:23:35 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,18 +137,20 @@ int		rev(void *a, void *b, void **aux, int len)
 	return(ft_strncmp(s2, s1, (l1 >= l2 ? l1 : l2)));
 }
 
-void	output_type(mode_t m)
+void	output_type(char *path, mode_t m)
 {
-	if (m & S_IFREG)
+	char ret[512];
+
+	if (m & S_IFREG && !(m & S_IFLNK))
 		ft_putchar('-');
-	else if (m & S_IFCHR)
+	else if (m & S_IFLNK && readlink(path, ret, 512) >= 0)
+		ft_putchar('l');
+	else if (S_ISCHR(m))
 		ft_putchar('c');
-	else if (m & S_IFBLK)
+	else if (S_ISBLK(m))
 		ft_putchar('b');
 	else if (m & S_IFDIR)
 		ft_putchar('d');
-	else if (m & S_IFLNK)
-		ft_putchar('l');
 	else if (m & S_IFSOCK)
 		ft_putchar('s');
 	else if (m & S_IFIFO)
@@ -212,16 +214,16 @@ void	output_time(time_t mod)
 void	output_name(const char *fn, mode_t m)
 {
 	char buf[512];
-	int count;
+	int ret;
 
 	if (m & S_IFLNK)
 	{
-		count = readlink(fn, buf, 512);
-		if (count >= 0)
+		ret = readlink(fn, buf, 512);
+		if (ret >= 0)
 		{
-			buf[count] = '\0';
+			buf[ret] = '\0';
 			ft_printf(" %s -> %s\n", ft_strrchr(fn, '/') + 1, buf);
-			ft_bzero(buf, count);
+			ft_bzero(buf, ret);
 			return ;
 		}
 		else
@@ -250,7 +252,7 @@ void	output_stats(char *file, void **aux)
 		if (!pw)
 			ft_printf("path: %s\nuid: %d\n", path, stats.st_uid);
 		gw = getgrgid(stats.st_gid) ? getgrgid(stats.st_gid)->gr_name: NULL;
-		output_type(stats.st_mode);
+		output_type(path, stats.st_mode);
 		output_permissions(stats.st_mode);
 		ft_printf(" %d", stats.st_nlink);
 		ft_printf("%10s %10s", pw, gw);
@@ -300,7 +302,7 @@ void	output_dir(char *path, t_ops *ops)
 		dp = readdir(dpntr);
 	}
 	if (ops->l)
-		ft_printf("%d\n", blocks);
+		ft_printf("total %d\n", blocks);
 	aux[0] = (void*)ops;
 	aux[1] = (void*)path;
 	if (!ops->t && !ops->r)
