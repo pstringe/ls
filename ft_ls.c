@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/18 13:02:15 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/18 13:54:25 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,6 +227,8 @@ void	output_name(const char *fn, mode_t m)
 		else
 			ft_printf(" %s\n", ft_strrchr(fn, '/') + 1);
 	}
+	else
+		ft_printf(" %s\n", ft_strrchr(fn, '/') + 1);
 }
 
 void	output_stats(char *file, void **aux)
@@ -285,7 +287,7 @@ void	output_dir(char *path, t_ops *ops)
 	dp = readdir(dpntr);
 	dlst = NULL;
 	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))	
-		printf("\n%s\n", path);
+		printf("\n\n%s\n", path);
 	blocks = 0;
 	while (dp)
 	{
@@ -308,7 +310,6 @@ void	output_dir(char *path, t_ops *ops)
 	else if (ops->t)
 		ft_lstsort(dlst, tim, aux, 2);
 	ft_lstforeach(dlst, output_stats, aux, 2);
-	ft_putchar('\n');
 	ft_lstdstry(&dlst, NULL);
 	closedir(dpntr);
 }
