@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/17 10:22:11 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/18 13:02:15 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -259,6 +259,14 @@ void	output_stats(char *file, void **aux)
 	ft_memdel((void**)&path);
 }
 
+int		get_blocks(char *path)
+{
+	struct stat	f;
+
+	stat(path, &f);
+	return (f.st_blocks);
+}
+
 /*
 **	given a directory, extracts filnames and prints relvant information in propper order
 **	depending on the specified options
@@ -270,19 +278,27 @@ void	output_dir(char *path, t_ops *ops)
 	struct dirent 	*dp;
 	void			*aux[2];	
 	t_list 			*dlst;
+	int				blocks;
 
 	if (!(dpntr = opendir(path)))
 		return ;
 	dp = readdir(dpntr);
 	dlst = NULL;
 	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))	
-		printf("\n%s\n\n", path);
+		printf("\n%s\n", path);
+	blocks = 0;
 	while (dp)
 	{
-		if (!(!ops->a && dp->d_name[0] =='.'))
+		if (!(!ops->a && dp->d_name[0] == '.'))
+		{
 			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
+			if (ops->l)
+				blocks += get_blocks(get_path(path, dp->d_name));
+		}
 		dp = readdir(dpntr);
 	}
+	if (ops->l)
+		ft_printf("%d\n", blocks);
 	aux[0] = (void*)ops;
 	aux[1] = (void*)path;
 	if (!ops->t && !ops->r)
@@ -292,6 +308,7 @@ void	output_dir(char *path, t_ops *ops)
 	else if (ops->t)
 		ft_lstsort(dlst, tim, aux, 2);
 	ft_lstforeach(dlst, output_stats, aux, 2);
+	ft_putchar('\n');
 	ft_lstdstry(&dlst, NULL);
 	closedir(dpntr);
 }
