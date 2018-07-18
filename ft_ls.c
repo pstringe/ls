@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/18 14:23:35 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/18 14:59:10 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,7 +256,10 @@ void	output_stats(char *file, void **aux)
 		output_permissions(stats.st_mode);
 		ft_printf(" %d", stats.st_nlink);
 		ft_printf("%10s %10s", pw, gw);
-		ft_printf("%10lld ", stats.st_size);
+		if (stats.st_rdev)
+			ft_printf("%3d, %3d ", major(stats.st_rdev), minor(stats.st_rdev));
+		else
+			ft_printf("%10lld ", stats.st_size);
 		output_time(stats.st_mtime);
 		output_name(path, stats.st_mode);
 	}
