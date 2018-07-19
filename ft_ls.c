@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/18 19:42:55 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/19 15:24:36 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -242,7 +242,7 @@ void	output_stats(char *file, void **aux)
 	char			*gw;
 
 	ops = (t_ops*)*aux;
-	path = (char*)get_path(aux[1], file);
+	path = (char*)get_path((char*)aux[1], file);
 	if (!ops->l)
 		ft_printf("%s\n", file);
 	else
@@ -298,7 +298,7 @@ void	output_dir(char *path, t_ops *ops)
 	{
 		if (!(!ops->a && dp->d_name[0] == '.'))
 		{
-			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name))));
+			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
 			if (ops->l)
 			{
 				aux[1] = (void*)get_path(path, dp->d_name);
