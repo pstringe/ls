@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/18 14:59:10 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/18 19:42:55 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ void	output_type(char *path, mode_t m)
 {
 	char ret[512];
 
-	if (m & S_IFREG && !(m & S_IFLNK))
+	if (S_ISREG(m))
 		ft_putchar('-');
 	else if (m & S_IFLNK && readlink(path, ret, 512) >= 0)
 		ft_putchar('l');
@@ -291,16 +291,20 @@ void	output_dir(char *path, t_ops *ops)
 		return ;
 	dp = readdir(dpntr);
 	dlst = NULL;
-	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))	
-		printf("\n\n%s\n", path);
+	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))
+		ft_printf("\n\n%s\n", path);
 	blocks = 0;
 	while (dp)
 	{
 		if (!(!ops->a && dp->d_name[0] == '.'))
 		{
-			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
+			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name))));
 			if (ops->l)
-				blocks += get_blocks(get_path(path, dp->d_name));
+			{
+				aux[1] = (void*)get_path(path, dp->d_name);
+				blocks += get_blocks((char*)aux[1]);
+				ft_memdel((void**)&aux[1]);
+			}
 		}
 		dp = readdir(dpntr);
 	}
@@ -324,10 +328,14 @@ int		can_output(char *file, t_ops *ops)
 	int 	l;
 	int 	hidden;
 	int 	cur_dir;
+	char 	*a;
+	char 	*b;
 
 	l = ft_strlen(file);
 	cur_dir = !ft_strncmp(file, ".", l);
-	hidden = !cur_dir && (strrchr(file, '.') > strrchr(file, '/'));
+	hidden = !cur_dir && ((a = strrchr(file, '.')) > (b = strrchr(file, '/')));
+	a = NULL;
+	b = NULL;
 	return ((!ops->a && (!hidden || cur_dir)) || ops->a);
 }
 
