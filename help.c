@@ -6,11 +6,20 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:24:10 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 17:58:00 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/25 10:21:56 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
+
+int		die(int c, char *path)
+{
+	if (c == -1)
+		ft_printf("ft_ls: %s: you do not have permission to this directory\n", path);
+	if (c == -2)
+		ft_printf("ft_ls: %s: no such file or directory\n", path);
+	return (c);
+}
 
 char 	*get_path(char *parent, char *name)
 {

@@ -12,8 +12,8 @@ SRCS = ft_ls.c\
 OBJS = $(patsubst %.c, %.o, $(SRCS))
 LIBD = -L$(LINC) -lft
 PIBD = -L$(PINC) -lftprintf
-CFLAGS = -g -Wall -Werror -Wextra -I$(LINC) -I$(PINC)/includes
-OFLAGS = -o $(NAME) $(OBJS) $(LIBD) $(PIBD)
+CFLAGS = -fsanitize=address -g -Wall -Werror -Wextra -I$(LINC) -I$(PINC)/includes
+OFLAGS = -fsanitize=address -o $(NAME) $(OBJS) $(LIBD) $(PIBD)
 DSRCS = $(SRCS)
 DFLAGS = $(CFLAGS) -g $(LIBD) $(DSRCS) -o
 DNAME = $(NAME)_debug

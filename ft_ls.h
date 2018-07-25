@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 19:31:04 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 18:01:51 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/25 08:44:05 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void			output_dir(char *path, t_ops *ops);
 ** help
 */
 
+int		die(int c, char *path);
 char 	*get_path(char *parent, char *name);
 char	*get_month(int d);
 

@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:30:57 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 19:14:13 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/25 09:19:58 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ static int	get_files(t_list **dlst, char *path, t_ops *ops)
 	DIR				*dpntr;	
 	int 			blocks;
 	char			*file_path;
-
-	if (!(dpntr = opendir(path)))
-		return (0);
+	
+	if (!(S_ISDIR(get_stats(path).st_mode)))
+		return(die(-2, path));
+	if(!(dpntr = opendir(path)))
+		return (die(-1, path));	
 	dp = readdir(dpntr);
 	blocks = 0;
 	while (dp)
