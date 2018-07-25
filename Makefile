@@ -2,7 +2,13 @@ CC = gcc
 LINC = ./includes/libft
 PINC = ./includes/ft_printf
 NAME = ft_ls
-SRCS = ft_ls.c
+SRCS = ft_ls.c\
+	   recurse.c\
+	   stats.c\
+	   output.c\
+	   directory.c\
+	   sort.c\
+	   help.c
 OBJS = $(patsubst %.c, %.o, $(SRCS))
 LIBD = -L$(LINC) -lft
 PIBD = -L$(PINC) -lftprintf

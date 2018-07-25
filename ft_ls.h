@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 19:31:04 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 17:18:34 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/24 18:01:51 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,39 @@ typedef struct	s_ops
 	int	R;
 }				t_ops;
 
+/*
+**	recurse
+*/
+
+void			recurse(char *dir, t_ops *ops);
+
+/*
+**	stats
+*/
+
+struct stat		get_stats(const char *path);
+int				get_blocks(char *path);
+
+/*
+** output
+*/
+
+void			output_stats(char *file, void **aux);
+void			output_dir(char *path, t_ops *ops);
+
+/*
+** help
+*/
+
+char 	*get_path(char *parent, char *name);
+char	*get_month(int d);
+
+/*
+**	sort
+*/
+
+int		lex(void *a, void *b, void **aux, int len);
+int		tim(void *a, void *b, void **aux, int len);
+int		rev(void *a, void *b, void **aux, int len);
 
 #endif
