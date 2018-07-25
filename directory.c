@@ -6,11 +6,40 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:30:57 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 17:47:36 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/24 18:48:14 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
+
+static int	get_files(t_list **dlst, char *path, t_ops *ops)
+{
+	struct dirent	*dp;
+	DIR				*dpntr;	
+	int 			blocks;
+	char			*file_path;
+
+	if (!(dpntr = opendir(path)))
+		return (0);
+	dp = readdir(dpntr);
+	blocks = 0;
+	while (dp)
+	{
+		if (!(!ops->a && dp->d_name[0] == '.'))
+		{
+			ft_lstadd(dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
+			if (ops->l)
+			{
+				file_path = get_path(path, dp->d_name);
+				blocks += get_blocks(file_path);
+				ft_memdel((void**)&file_path);
+			}
+		}
+		dp = readdir(dpntr);
+	}
+	closedir(dpntr);
+	return (blocks);
+}
 
 static void	break_func()
 {
@@ -23,37 +52,16 @@ static void	break_func()
 */
 void	output_dir(char *path, t_ops *ops)
 {
-	DIR				*dpntr;	
-	struct dirent 	*dp;
 	void			*aux[2];	
-	t_list 			*dlst;
 	int				blocks;
-	
+	t_list			*dlst;
+
 	if (!ft_strncmp(path, "//nfs/2018/j/jsanders/Day05", 27))
 		break_func();
-	if (!(dpntr = opendir(path)))
-	{
-		return ;
-	}
-	dp = readdir(dpntr);
-	dlst = NULL;
 	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))
 		ft_printf("\n\n%s\n", path);
-	blocks = 0;
-	while (dp)
-	{
-		if (!(!ops->a && dp->d_name[0] == '.'))
-		{
-			ft_lstadd(&dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
-			if (ops->l)
-			{
-				aux[1] = (void*)get_path(path, dp->d_name);
-				blocks += get_blocks((char*)aux[1]);
-				ft_memdel((void**)&aux[1]);
-			}
-		}
-		dp = readdir(dpntr);
-	}
+	dlst = NULL;
+	blocks = get_files(&dlst, path, ops);
 	if (ops->l)
 		ft_printf("total %d\n", blocks);
 	aux[0] = (void*)ops;
@@ -65,9 +73,7 @@ void	output_dir(char *path, t_ops *ops)
 	else if (ops->t)
 		ft_lstsort(dlst, tim, aux, 2);
 	ft_lstforeach(dlst, output_stats, aux, 2);
-	
 	aux[0] = NULL;
 	aux[1] = NULL;
 	ft_lstdstry(&dlst, NULL);
-	closedir(dpntr);
 }
