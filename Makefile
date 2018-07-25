@@ -1,4 +1,4 @@
-C = gcc
+CC = gcc
 LINC = ./includes/libft
 PINC = ./includes/ft_printf
 NAME = ft_ls
@@ -24,7 +24,7 @@ $(NAME): libft.a libftprintf.a $(OBJS)
 	$(CC) $(OFLAGS)
 
 $(OBJS): $(SRCS)
-	$(CC) $(CFLAGS) -c $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS) 	
 	echo "successful object compilation"
 
 clean:

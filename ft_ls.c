@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/19 15:24:36 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/24 15:14:20 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,6 +202,7 @@ char	*get_month(int d)
 		m = NULL;
 	return (m);
 }
+
 void	output_time(time_t mod)
 {
 	struct tm	*time;
@@ -274,11 +275,14 @@ int		get_blocks(char *path)
 	return (f.st_blocks);
 }
 
+void	break_func()
+{
+	return ;
+}
 /*
 **	given a directory, extracts filnames and prints relvant information in propper order
 **	depending on the specified options
 */
-
 void	output_dir(char *path, t_ops *ops)
 {
 	DIR				*dpntr;	
@@ -286,9 +290,13 @@ void	output_dir(char *path, t_ops *ops)
 	void			*aux[2];	
 	t_list 			*dlst;
 	int				blocks;
-
+	
+	if (!ft_strncmp(path, "//nfs/2018/j/jsanders/Day05", 27))
+		break_func();
 	if (!(dpntr = opendir(path)))
+	{
 		return ;
+	}
 	dp = readdir(dpntr);
 	dlst = NULL;
 	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))
@@ -319,6 +327,9 @@ void	output_dir(char *path, t_ops *ops)
 	else if (ops->t)
 		ft_lstsort(dlst, tim, aux, 2);
 	ft_lstforeach(dlst, output_stats, aux, 2);
+	
+	aux[0] = NULL;
+	aux[1] = NULL;
 	ft_lstdstry(&dlst, NULL);
 	closedir(dpntr);
 }
@@ -352,6 +363,7 @@ void 	recurse(char *dir, t_ops *ops)
 	DIR				*dpntr;
 	struct dirent 	*cur;
 	char 			*subdir;
+	char			pass[512];
 
 	if (can_output(dir, ops))
 		output_dir(dir, ops);
@@ -366,10 +378,12 @@ void 	recurse(char *dir, t_ops *ops)
 				ft_memdel((void**)&subdir);
 				continue ;
 			}
-			recurse(subdir, ops);
+			ft_strncpy(pass, subdir, 512);
 			ft_memdel((void**)&subdir);
+			recurse(pass, ops);
 		}
 	}
+	//assert(ft_strncmp(dir, "//nfs/2018/j/jsanders/Day05", 27));
 	if (dir)
 		ft_memdel((void**)&cur);
 	if (cur)
@@ -382,7 +396,7 @@ void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 {
 	int 		no_of_dirs;
 	int			i;
-	
+
 	no_of_dirs = argc - (idx < 0 ? 1 : idx);
 	if (!ops->R && !no_of_dirs)
 		output_dir(".", ops);

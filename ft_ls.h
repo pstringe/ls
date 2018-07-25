@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 19:31:04 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/16 16:09:07 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/24 17:18:34 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,15 @@
 # include <dirent.h>
 # include <grp.h>
 # include <uuid/uuid.h>
+
+typedef struct	s_ops
+{
+	int	l;
+	int	a;
+	int	t;
+	int	r;
+	int	R;
+}				t_ops;
+
+
 #endif
