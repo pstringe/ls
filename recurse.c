@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:20:56 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/25 10:17:35 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/26 15:39:23 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,13 @@ void 	recurse(char *dir, t_ops *ops)
 	DIR				*dpntr;
 	struct dirent 	*cur;
 	char 			*subdir;
-	char			pass[512];
+	//char			pass[512];
 	char			tmp[512];
 	
 	if (can_output(dir, ops))
 		output_dir(dir, ops);
-	dpntr = opendir(dir);
+	if ((dpntr = opendir(dir)) == NULL)
+		return ;
 	while (dpntr && (cur = readdir(dpntr)))
 	{
 		if (can_recurse(dir, cur->d_name, ops))
@@ -73,9 +74,9 @@ void 	recurse(char *dir, t_ops *ops)
 				ft_memdel((void**)&subdir);
 				continue ;
 			}
-			ft_strncpy(pass, subdir, 512);
+			//ft_strncpy(pass, subdir, 512);
+			recurse(subdir, ops);
 			ft_memdel((void**)&subdir);
-			recurse(pass, ops);
 		}
 	}
 	//assert(ft_strncmp(dir, "//nfs/2018/j/jsanders/Day05", 27));
@@ -83,7 +84,6 @@ void 	recurse(char *dir, t_ops *ops)
 		ft_memdel((void**)&cur);
 	if (cur)
 		ft_memdel((void**)&cur);
-	if (dpntr)
-		closedir(dpntr);
+	closedir(dpntr);
 }
 

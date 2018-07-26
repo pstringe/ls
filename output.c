@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:25:29 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 17:43:54 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/25 14:14:33 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,11 @@ static void	output_permissions(mode_t m)
 static void	output_time(time_t mod)
 {
 	struct tm	*time;
-	
-	time = localtime(&mod);
-	ft_printf("%4s %2d %.2d:%.2d", get_month(time->tm_mon), time->tm_mday, time->tm_hour, time->tm_min);
+	char		*month;
 
+	time = localtime(&mod);
+	ft_printf("%4s %2d %.2d:%.2d", (month = get_month(time->tm_mon)), time->tm_mday, time->tm_hour, time->tm_min);
+	month = NULL;
 }
 
 static void	output_name(const char *fn, mode_t m)
