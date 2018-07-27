@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:20:56 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 11:54:53 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 16:44:06 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ void 	recurse(char *dir, t_ops *ops)
 		//ft_memdel((void**)&dir);
 		return ;
 	}
-	//subdir = NULL;
+
+	ft_bzero(subdir, 512);
 	while (dpntr && (cur = readdir(dpntr)))
 	{
 		if (can_recurse(dir, cur->d_name, ops))
@@ -77,14 +78,14 @@ void 	recurse(char *dir, t_ops *ops)
 			get_path(subdir, dir, cur->d_name);
 			if (!opendir(subdir))
 			{
+				ft_bzero(subdir, 512);
 				//ft_memdel((void**)&subdir);
 				continue ;
 			}
 			recurse(subdir, ops);
-			/*
-			if (subdir)
-				ft_memdel((void**)&subdir);
-			*/
+			ft_bzero(subdir, 512);
+			//if (&subdir)
+				//ft_memdel((void**)&subdir);
 		}
 	}
 	/*

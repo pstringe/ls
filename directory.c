@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:30:57 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 11:58:46 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 13:01:34 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,12 @@ static int	get_files(t_list **dlst, char *path, t_ops *ops)
 			{
 				get_path(full_path, path, dp->d_name);
 				blocks += get_blocks(full_path);
-				ft_memdel((void**)&full_path);
+				//ft_memdel((void**)&full_path);
 			}
 		}
 		dp = readdir(dpntr);
 	}
+	ft_memdel((void**)&dp);
 	closedir(dpntr);
 	return (blocks);
 }
