@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:56:20 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/24 18:01:54 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 12:00:04 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ int		tim(void *a, void *b, void **aux, int len)
 	char 	*s2;
 	time_t		t1;
 	time_t		t2;
-	char		*p;
+	char		p[512];
 
 	if (!aux || !len)
 		aux = NULL;
 	s1 = (char*)a;
 	s2 = (char*)b;
-	p = get_path((char*)aux[1], s1);
+	get_path(p, (char*)aux[1], s1);
 	t1 = get_stats(p).st_mtime;
-	ft_memdel((void**)&p);
-	p = get_path((char*)aux[1], s2);
+	//ft_memdel((void**)&p);
+	get_path(p, (char*)aux[1], s2);
 	t2 = get_stats(p).st_mtime;
-	ft_memdel((void**)&p);
+	//ft_memdel((void**)&p);
 	return(t1 < t2);
 }
 

@@ -1,0 +1,6935 @@
+./ft_ls -lR
+total 28915
+-rw-r--r-- 1  pstringe 2017_october      1125  Jul 25 13:14 Makefile
+-rw-r--r-- 1  pstringe 2017_october         9  Jul 16 15:38 author
+-rw-r--r-- 1  pstringe 2017_october      2373  Jul 26 15:41 directory.c
+-rw-r--r-- 1  pstringe 2017_october      6840  Jul 26 16:56 directory.o
+-rw-r--r-- 1  pstringe 2017_october       112  Jul 16 15:11 error.txt
+-rwxr-xr-x 1  pstringe 2017_october     47228  Jul 26 16:56 ft_ls
+-rw-r--r-- 1  pstringe 2017_october      2091  Jul 26 15:41 ft_ls.c
+-rw-r--r-- 1  pstringe 2017_october      1791  Jul 26 15:41 ft_ls.h
+-rw-r--r-- 1  pstringe 2017_october      4800  Jul 26 16:56 ft_ls.o
+-rw-r--r-- 1  pstringe 2017_october      1741  Jul 26 15:41 help.c
+-rw-r--r-- 1  pstringe 2017_october      3924  Jul 26 16:56 help.o
+drwxr-xr-x 4  pstringe 2017_october      4096  Jul 12 13:35 includes
+-rw-r--r-- 1  pstringe 2017_october       847  Jul 26 17:04 leak_output.txt
+-rw-r--r-- 1  pstringe 2017_october  14686451  Jul 18 17:54 leaks
+-rw-r--r-- 1  pstringe 2017_october      3201  Jul 26 15:41 output.c
+-rw-r--r-- 1  pstringe 2017_october      9652  Jul 26 16:56 output.o
+-rw-r--r-- 1  pstringe 2017_october      2526  Jul 26 16:48 recurse.c
+-rw-r--r-- 1  pstringe 2017_october      6844  Jul 26 16:56 recurse.o
+-rw-r--r-- 1  pstringe 2017_october       933  Jul 24 19:44 requirments.txt
+-rw-r--r-- 1  pstringe 2017_october      1858  Jul 24 19:17 sort.c
+-rw-r--r-- 1  pstringe 2017_october      4268  Jul 26 16:56 sort.o
+-rw-r--r-- 1  pstringe 2017_october      1107  Jul 24 19:17 stats.c
+-rw-r--r-- 1  pstringe 2017_october      4836  Jul 26 16:56 stats.o
+
+./includes
+total 16
+drwxr-xr-x 5  pstringe 2017_october      4096  Jul 26 15:39 ft_printf
+drwxr-xr-x 2  pstringe 2017_october      4096  Jul 26 16:58 libft
+
+./includes/ft_printf
+total 291
+-rw-r--r-- 1  pstringe 2017_october      1685  Jul 25 15:23 Makefile
+-rw-r--r-- 1  pstringe 2017_october         9  Jul 12 13:36 author
+drwxr-xr-x 2  pstringe 2017_october      4096  Jul 25 13:13 includes
+drwxr-xr-x 2  pstringe 2017_october      4096  Jul 26 15:43 libft
+-rw-r--r-- 1  pstringe 2017_october    133960  Jul 25 14:07 libftprintf.a
+drwxr-xr-x 2  pstringe 2017_october      4096  Jul 25 13:13 srcs
+
+./includes/ft_printf/libft
+total 863
+-rw-r--r-- 1  pstringe 2017_october      1459  Jul 12 13:36 Makefile
+-rw-r--r-- 1  pstringe 2017_october         9  Jul 12 13:36 author
+-rw-r--r-- 1  pstringe 2017_october      1033  Jul 12 13:36 ft_absval.c
+-rw-r--r-- 1  pstringe 2017_october      2132  Jul 26 15:43 ft_absval.o
+-rw-r--r-- 1  pstringe 2017_october      1333  Jul 12 13:36 ft_atoi.c
+-rw-r--r-- 1  pstringe 2017_october      2692  Jul 26 15:43 ft_atoi.o
+-rw-r--r-- 1  pstringe 2017_october      1014  Jul 12 13:36 ft_bzero.c
+-rw-r--r-- 1  pstringe 2017_october      2448  Jul 26 15:43 ft_bzero.o
+-rw-r--r-- 1  pstringe 2017_october      1081  Jul 12 13:36 ft_is_whitespace.c
+-rw-r--r-- 1  pstringe 2017_october      2192  Jul 26 15:43 ft_is_whitespace.o
+-rw-r--r-- 1  pstringe 2017_october      1009  Jul 12 13:36 ft_isalnum.c
+-rw-r--r-- 1  pstringe 2017_october      2184  Jul 26 15:43 ft_isalnum.o
+-rw-r--r-- 1  pstringe 2017_october      1017  Jul 12 13:36 ft_isalpha.c
+-rw-r--r-- 1  pstringe 2017_october      2116  Jul 26 15:43 ft_isalpha.o
+-rw-r--r-- 1  pstringe 2017_october       977  Jul 12 13:36 ft_isascii.c
+-rw-r--r-- 1  pstringe 2017_october      2088  Jul 26 15:43 ft_isascii.o
+-rw-r--r-- 1  pstringe 2017_october       990  Jul 12 13:36 ft_isdigit.c
+-rw-r--r-- 1  pstringe 2017_october      2088  Jul 26 15:43 ft_isdigit.o
+-rw-r--r-- 1  pstringe 2017_october       991  Jul 12 13:36 ft_isprint.c
+-rw-r--r-- 1  pstringe 2017_october      2088  Jul 26 15:43 ft_isprint.o
+-rw-r--r-- 1  pstringe 2017_october      1559  Jul 12 13:36 ft_itoa.c
+-rw-r--r-- 1  pstringe 2017_october      3308  Jul 26 15:43 ft_itoa.o
+-rw-r--r-- 1  pstringe 2017_october      1019  Jul 12 13:36 ft_lstadd.c
+-rw-r--r-- 1  pstringe 2017_october      2552 C: 0x7f941d4027c0
+C: 0x7f941d500030
+C: 0x7f941d500040
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./leak_output.txt
+C: 0x7f941d500060
+C: 0x7f941d500070
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./recurse.c
+C: 0x7f941d500060
+C: 0x7f941d5000a0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./sort.o
+C: 0x7f941d500060
+C: 0x7f941d5000d0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./ft_ls.h
+C: 0x7f941d500060
+C: 0x7f941d500100
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./ft_ls.c
+C: 0x7f941d500060
+C: 0x7f941d500130
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./help.o
+C: 0x7f941d500060
+C: 0x7f941d500160
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./stats.o
+C: 0x7f941d500060
+C: 0x7f941d500190
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./error.txt
+C: 0x7f941d500060
+C: 0x7f941d5001c0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./Makefile
+C: 0x7f941d500060
+C: 0x7f941d5001f0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./ft_ls
+C: 0x7f941d500060
+C: 0x7f941d500220
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./help.c
+C: 0x7f941d500060
+C: 0x7f941d500250
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./author
+C: 0x7f941d500060
+C: 0x7f941d500280
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./directory.o
+C: 0x7f941d4028b0
+C: 0x7f941d4028c0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./leaks
+C: 0x7f941d4028b0
+C: 0x7f941d4028f0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./output.c
+C: 0x7f941d4028b0
+C: 0x7f941d402920
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./directory.c
+C: 0x7f941d4028b0
+C: 0x7f941d402950
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./ft_ls.o
+C: 0x7f941d500060
+C: 0x7f941d5002b0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./includes
+C: 0x7f941d500060
+C: 0x7f941d5002e0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./output.o
+C: 0x7f941d600030
+C: 0x7f941d600040
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./requirments.txt
+C: 0x7f941d600060
+C: 0x7f941d600070
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./sort.c
+C: 0x7f941d600060
+C: 0x7f941d6000a0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./stats.c
+C: 0x7f941d600060
+C: 0x7f941d6000d0
+D: 0x7ffee291e6a8: ./
+D: 0x7ffee291e780: ./recurse.o
+C: 0x7f941d6000e0
+C: 0x7f941d600110
+D: 0x7f941d600108: 
+D: 0x7ffee291a788: ¸~.
+C: 0x7f941d5002e0
+C: 0x7f941d500060
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d700000
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d4027e0
+C: 0x7f941d402810
+D: 0x7f941d402808: 
+C: 0x7f941d402810
+D: 0x7f941d402808: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d4027e0
+C: 0x7f941d402a90
+C: 0x7f941d402950
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 1125
+D: 0x7f941d402808: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a00
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a00
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a00
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a00
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d4027e0
+C: 0x7f941d402a90
+D: 0x7f941d402808: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./Makefile
+C: 0x7f941d700030
+C: 0x7f941d700040
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+C: 0x7f941d6002e0
+D: 0x7ffee291a490:          
+D: 0x7ffee291a3f0: 9
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./author
+C: 0x7f941d4028b0
+C: 0x7f941d402950
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 2373
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./directory.c
+C: 0x7f941d6002c0
+C: 0x7f941d6002d0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d600290
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 6840
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./directory.o
+C: 0x7f941d700090
+C: 0x7f941d7000a0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d600290
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+C: 0x7f941d402950
+D: 0x7ffee291a490:        
+D: 0x7ffee291a3f0: 112
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./error.txt
+C: 0x7f941d7000a0
+C: 0x7f941d700090
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291a490:      
+D: 0x7ffee291a3f0: 47228
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./ft_ls
+C: 0x7f941d6002c0
+C: 0x7f941d6002d0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d600290
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700030
+C: 0x7f941d700090
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 2091
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d700000
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./ft_ls.c
+C: 0x7f941d6002d0
+C: 0x7f941d600290
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700030
+C: 0x7f941d700090
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 1791
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./ft_ls.h
+C: 0x7f941d600290
+C: 0x7f941d6002a0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d700000
+C: 0x7f941d700030
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+C: 0x7f941d4028b0
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 4800
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d6002b0
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./ft_ls.o
+C: 0x7f941d700030
+C: 0x7f941d700040
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d402a90
+C: 0x7f941d700090
+D: 0x7f941d402ab8: 
+C: 0x7f941d700090
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d402ac0
+C: 0x7f941d500060
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 1741
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d500530
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./help.c
+C: 0x7f941d402950
+C: 0x7f941d4028b0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d6002b0
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+C: 0x7f941d700040
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 3924
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./help.o
+C: 0x7f941d600290
+C: 0x7f941d6002a0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+C: 0x7f941d700030
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 4096
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./includes
+C: 0x7f941d6002a0
+C: 0x7f941d6002b0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+C: 0x7f941d700030
+D: 0x7ffee291a490:        
+D: 0x7ffee291a3f0: 847
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+C: 0x7f941d4028b0
+D: 0x7ffee291a470: 0
+D: 0x7ffee291a478: 4
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./leak_output.txt
+C: 0x7f941d500060
+C: 0x7f941d500560
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d500530
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d500530
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d6002d0
+C: 0x7f941d6002b0
+C: 0x7f941d600290
+D: 0x7ffee291a490:   
+D: 0x7ffee291a3f0: 14686451
+D: 0x7f941d6002f8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d6002d0
+C: 0x7f941d600290
+D: 0x7f941d6002f8: 
+C: 0x7f941d600290
+D: 0x7f941d6002f8: 
+C: 0x7f941d600290
+D: 0x7f941d6002f8: 
+C: 0x7f941d600290
+D: 0x7f941d6002f8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./leaks
+C: 0x7f941d600290
+C: 0x7f941d6002a0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d500530
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d6002b0
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d6002b0
+C: 0x7f941d6002e0
+C: 0x7f941d600290
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 3201
+D: 0x7f941d6002d8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d6002e0
+D: 0x7f941d700028: 
+C: 0x7f941d6002e0
+D: 0x7f941d700028: 
+C: 0x7f941d6002e0
+D: 0x7f941d700028: 
+C: 0x7f941d6002e0
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d6002b0
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./output.c
+C: 0x7f941d6002a0
+C: 0x7f941d600290
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 9652
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d6002b0
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002d8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./output.o
+C: 0x7f941d500060
+C: 0x7f941d500560
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d6002a0
+C: 0x7f941d6002d0
+C: 0x7f941d600290
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 2526
+D: 0x7f941d6002c8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d500530
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+C: 0x7f941d500570
+D: 0x7f941d500558: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d6002a0
+C: 0x7f941d6002d0
+D: 0x7f941d6002c8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./recurse.c
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d500530
+C: 0x7f941d6002d0
+D: 0x7f941d500558: 
+C: 0x7f941d6002d0
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+C: 0x7f941d700030
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 6844
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d600290
+C: 0x7f941d6002d0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002d0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002d0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002d0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./recurse.o
+C: 0x7f941d402950
+C: 0x7f941d402ac0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d4027e0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291a490:        
+D: 0x7ffee291a3f0: 933
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d402a90
+C: 0x7f941d4027e0
+D: 0x7f941d402ab8: 
+C: 0x7f941d4027e0
+D: 0x7f941d402ab8: 
+C: 0x7f941d4027e0
+D: 0x7f941d402ab8: 
+C: 0x7f941d4027e0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./requirments.txt
+C: 0x7f941d402950
+C: 0x7f941d4028b0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d600290
+C: 0x7f941d6002d0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d6002c0
+C: 0x7f941d6002e0
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 1858
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./sort.c
+C: 0x7f941d6002c0
+C: 0x7f941d6002d0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d700000
+C: 0x7f941d700090
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d600290
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+C: 0x7f941d500060
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 4268
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d600290
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./sort.o
+C: 0x7f941d4028b0
+C: 0x7f941d402950
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d600290
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002e0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d402a90
+C: 0x7f941d402ac0
+C: 0x7f941d4028b0
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 1107
+D: 0x7f941d402ab8: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d402ac0
+D: 0x7f941d700028: 
+C: 0x7f941d402ac0
+D: 0x7f941d700028: 
+C: 0x7f941d402ac0
+D: 0x7f941d700028: 
+C: 0x7f941d402ac0
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./stats.c
+C: 0x7f941d700090
+C: 0x7f941d7000a0
+D: 0x7ffee291e5d8: ./
+C: 0x7f941d500530
+C: 0x7f941d500560
+D: 0x7f941d500558: 
+D: 0x7ffee291a5b8: q~.
+C: 0x7f941d600290
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6002c0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a5b8: u~.
+C: 0x7f941d700000
+C: 0x7f941d700030
+C: 0x7f941d700090
+D: 0x7ffee291a490:       
+D: 0x7ffee291a3f0: 4836
+D: 0x7f941d700028: 
+D: 0x7ffee291a5b8: ‰~.
+C: 0x7f941d700000
+C: 0x7f941d402a90
+D: 0x7f941d700028: 
+C: 0x7f941d402a90
+D: 0x7f941d700028: 
+C: 0x7f941d402a90
+D: 0x7f941d700028: 
+C: 0x7f941d402a90
+D: 0x7f941d700028: 
+D: 0x7ffee291a588: ‘~.
+C: 0x7f941d402ab0
+C: 0x7f941d402a90
+D: 0x7f941d402ad8: 
+D: 0x7ffee291a378: ®~.
+D: 0x7ffee291e6d0: ./stats.o
+D: 0x7f941d6000b0: Makefile
+D: 0x7ffee291e788: 
+D: 0x7f941d600080: author
+D: 0x7ffee291e788: 
+D: 0x7f941d600040: directory.c
+D: 0x7ffee291e788: 
+D: 0x7f941d600000: directory.o
+D: 0x7ffee291e788: 
+D: 0x7f941d5002c0: error.txt
+D: 0x7ffee291e788: 
+D: 0x7f941d500290: ft_ls
+D: 0x7ffee291e788: 
+D: 0x7f941d402930: ft_ls.c
+D: 0x7ffee291e788: 
+D: 0x7f941d402900: ft_ls.h
+D: 0x7ffee291e788: 
+D: 0x7f941d4028d0: ft_ls.o
+D: 0x7ffee291e788: 
+D: 0x7f941d402880: help.c
+D: 0x7ffee291e788: 
+D: 0x7f941d500260: help.o
+D: 0x7ffee291e788: 
+D: 0x7f941d500230: includes
+D: 0x7ffee291e788: 
+D: 0x7f941d500200: leak_output.txt
+D: 0x7ffee291e788: 
+D: 0x7f941d5001d0: leaks
+D: 0x7ffee291e788: 
+D: 0x7f941d5001a0: output.c
+D: 0x7ffee291e788: 
+D: 0x7f941d500170: output.o
+D: 0x7ffee291e788: 
+D: 0x7f941d500140: recurse.c
+D: 0x7ffee291e788: 
+D: 0x7f941d500110: recurse.o
+D: 0x7ffee291e788: 
+D: 0x7f941d5000e0: requirments.txt
+D: 0x7ffee291e788: 
+D: 0x7f941d5000b0: sort.c
+D: 0x7ffee291e788: 
+D: 0x7f941d500080: sort.o
+D: 0x7ffee291e788: 
+D: 0x7f941d500040: stats.c
+D: 0x7ffee291e788: 
+D: 0x7f941d500000: stats.o
+D: 0x7ffee291e788: 
+C: 0x7f941d4028c0
+C: 0x7f941d402a90
+D: 0x7ffee291e808: ./
+D: 0x7ffee291e838: ./Makefile
+C: 0x7f941d402a90
+C: 0x7f941d402aa0
+D: 0x7ffee291e808: ./
+D: 0x7ffee291e838: ./ft_ls
+C: 0x7f941d402aa0
+C: 0x7f941d402a90
+D: 0x7ffee291e808: ./
+D: 0x7ffee291e838: ./author
+C: 0x7f941d600070
+C: 0x7f941d600080
+D: 0x7ffee291e808: ./
+D: 0x7ffee291e838: ./leaks
+C: 0x7f941d600080
+C: 0x7f941d600070
+D: 0x7ffee291e808: ./
+C: 0x7f941d5009d0
+C: 0x7f941d500000
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a748: ³~.
+C: 0x7f941d700090
+C: 0x7f941d700020
+D: 0x7ffee291e668: ./includes/
+D: 0x7ffee291e740: ./includes/ft_printf
+C: 0x7f941d700040
+C: 0x7f941d700150
+D: 0x7ffee291e668: ./includes/
+D: 0x7ffee291e740: ./includes/libft
+C: 0x7f941d700170
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+D: 0x7ffee291a748: ¸~.
+C: 0x7f941d5005d0
+C: 0x7f941d500a00
+D: 0x7ffee291e598: ./includes/
+C: 0x7f941d600080
+C: 0x7f941d700150
+D: 0x7f941d6000a8: 
+D: 0x7ffee291a578: q~.
+C: 0x7f941d600080
+C: 0x7f941d6000b0
+D: 0x7f941d6000a8: 
+C: 0x7f941d6000b0
+D: 0x7f941d6000a8: 
+D: 0x7ffee291a578: u~.
+C: 0x7f941d402aa0
+C: 0x7f941d4027e0
+C: 0x7f941d402a90
+D: 0x7ffee291a450:       
+D: 0x7ffee291a3b0: 4096
+D: 0x7f941d402ac8: 
+D: 0x7ffee291a578: ‰~.
+C: 0x7f941d600080
+C: 0x7f941d6000b0
+D: 0x7f941d6000a8: 
+C: 0x7f941d6000b0
+D: 0x7f941d6000a8: 
+C: 0x7f941d6000b0
+D: 0x7f941d6000a8: 
+C: 0x7f941d6000b0
+D: 0x7f941d6000a8: 
+D: 0x7ffee291a548: ‘~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a338: ®~.
+D: 0x7ffee291e690: ./includes/ft_printf
+C: 0x7f941d6000b0
+C: 0x7f941d600000
+D: 0x7ffee291e598: ./includes/
+C: 0x7f941d402aa0
+C: 0x7f941d4027e0
+D: 0x7f941d402ac8: 
+D: 0x7ffee291a578: q~.
+C: 0x7f941d700170
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+D: 0x7ffee291a578: u~.
+C: 0x7f941d700170
+C: 0x7f941d700150
+C: 0x7f941d700040
+D: 0x7ffee291a450:       
+D: 0x7ffee291a3b0: 4096
+D: 0x7f941d700198: 
+D: 0x7ffee291a578: ‰~.
+C: 0x7f941d700170
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+D: 0x7ffee291a548: ‘~.
+C: 0x7f941d700170
+C: 0x7f941d700150
+D: 0x7f941d700198: 
+D: 0x7ffee291a338: ®~.
+D: 0x7ffee291e690: ./includes/libft
+D: 0x7f941d700020: ft_printf
+D: 0x7ffee291e748: 
+D: 0x7f941d700000: libft
+D: 0x7ffee291e748: 
+C: 0x7f941d600020
+C: 0x7f941d600000
+D: 0x7ffee291e7c8: ./includes/
+C: 0x7f941d700020
+C: 0x7f941d402880
+D: 0x7f941d700048: 
+D: 0x7ffee291a708: ³~.
+C: 0x7f941d402aa0
+C: 0x7f941d402ac0
+D: 0x7ffee291e628: ./includes/ft_printf/
+D: 0x7ffee291e700: ./includes/ft_printf/Makefile
+C: 0x7f941d4028a0
+C: 0x7f941d4028c0
+D: 0x7ffee291e628: ./includes/ft_printf/
+D: 0x7ffee291e700: ./includes/ft_printf/author
+C: 0x7f941d700150
+C: 0x7f941d700020
+D: 0x7ffee291e628: ./includes/ft_printf/
+D: 0x7ffee291e700: ./includes/ft_printf/libftprintf.a
+C: 0x7f941d4028a0
+C: 0x7f941d4028e0
+D: 0x7ffee291e628: ./includes/ft_printf/
+D: 0x7ffee291e700: ./includes/ft_printf/libft
+C: 0x7f941d5009d0
+C: 0x7f941d500ac0
+D: 0x7ffee291e628: ./includes/ft_printf/
+D: 0x7ffee291e700: ./includes/ft_printf/includes
+C: 0x7f941d600080
+C: 0x7f941d6000a0
+D: 0x7ffee291e628: ./includes/ft_printf/
+D: 0x7ffee291e700: ./includes/ft_printf/srcs
+C: 0x7f941d600290
+C: 0x7f941d6000a0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a708: ¸~.
+C: 0x7f941d5009d0
+C: 0x7f941d500ac0
+D: 0x7ffee291e558: ./includes/ft_printf/
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a538: q~.
+C: 0x7f941d402900
+C: 0x7f941d4028e0
+D: 0x7f941d402928: 
+C: 0x7f941d4028e0
+D: 0x7f941d402928: 
+D: 0x7ffee291a538: u~.
+C: 0x7f941d402900
+C: 0x7f941d4028e0
+C: 0x7f941d4028a0
+D: 0x7ffee291a410:       
+D: 0x7ffee291a370: 1685
+D: 0x7f941d402928: 
+D: 0x7ffee291a538: ‰~.
+C: 0x7f941d500a20
+C: 0x7f941d5009d0
+D: 0x7f941d500a48: 
+C: 0x7f941d5009d0
+D: 0x7f941d500a48: 
+C: 0x7f941d5009d0
+D: 0x7f941d500a48: 
+C: 0x7f941d5009d0
+D: 0x7f941d500a48: 
+D: 0x7ffee291a508: ‘~.
+C: 0x7f941d402900
+C: 0x7f941d4028e0
+D: 0x7f941d402928: 
+D: 0x7ffee291a2f8: ®~.
+D: 0x7ffee291e650: ./includes/ft_printf/Makefile
+C: 0x7f941d600080
+C: 0x7f941d6000a0
+D: 0x7ffee291e558: ./includes/ft_printf/
+C: 0x7f941d402900
+C: 0x7f941d4028e0
+D: 0x7f941d402928: 
+D: 0x7ffee291a538: q~.
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a538: u~.
+C: 0x7f941d5009d0
+C: 0x7f941d500ac0
+C: 0x7f941d5005e0
+D: 0x7ffee291a410:          
+D: 0x7ffee291a370: 9
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: ‰~.
+C: 0x7f941d600290
+C: 0x7f941d600080
+D: 0x7f941d6002b8: 
+C: 0x7f941d600080
+D: 0x7f941d6002b8: 
+C: 0x7f941d600080
+D: 0x7f941d6002b8: 
+C: 0x7f941d600080
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a508: ‘~.
+C: 0x7f941d402900
+C: 0x7f941d4028e0
+D: 0x7f941d402928: 
+D: 0x7ffee291a2f8: ®~.
+D: 0x7ffee291e650: ./includes/ft_printf/author
+C: 0x7f941d6000a0
+C: 0x7f941d600080
+D: 0x7ffee291e558: ./includes/ft_printf/
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a538: q~.
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a538: u~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+C: 0x7f941d5005e0
+D: 0x7ffee291a410:       
+D: 0x7ffee291a370: 4096
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: ‰~.
+C: 0x7f941d600290
+C: 0x7f941d6000a0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6000a0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6000a0
+D: 0x7f941d6002b8: 
+C: 0x7f941d6000a0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a508: ‘~.
+C: 0x7f941d600290
+C: 0x7f941d6000a0
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a2f8: ®~.
+D: 0x7ffee291e650: ./includes/ft_printf/includes
+C: 0x7f941d600080
+C: 0x7f941d6000a0
+D: 0x7ffee291e558: ./includes/ft_printf/
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: q~.
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a538: u~.
+C: 0x7f941d402900
+C: 0x7f941d4028e0
+C: 0x7f941d4028a0
+D: 0x7ffee291a410:       
+D: 0x7ffee291a370: 4096
+D: 0x7f941d402928: 
+D: 0x7ffee291a538: ‰~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a508: ‘~.
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a2f8: ®~.
+D: 0x7ffee291e650: ./includes/ft_printf/libft
+C: 0x7f941d6000a0
+C: 0x7f941d600290
+D: 0x7ffee291e558: ./includes/ft_printf/
+C: 0x7f941d6002c0
+C: 0x7f941d6000a0
+D: 0x7f941d6002e8: 
+D: 0x7ffee291a538: q~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: u~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+C: 0x7f941d5005e0
+D: 0x7ffee291a410:     
+D: 0x7ffee291a370: 133960
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: ‰~.
+C: 0x7f941d6002c0
+C: 0x7f941d600080
+D: 0x7f941d6002e8: 
+C: 0x7f941d600080
+D: 0x7f941d6002e8: 
+C: 0x7f941d600080
+D: 0x7f941d6002e8: 
+C: 0x7f941d600080
+C: 0x7f941d600050
+D: 0x7ffee291a3f0: 0
+D: 0x7ffee291a3f8: 7
+D: 0x7f941d6002e8: 
+D: 0x7ffee291a508: ‘~.
+C: 0x7f941d6002c0
+C: 0x7f941d600080
+D: 0x7f941d6002e8: 
+D: 0x7ffee291a2f8: ®~.
+D: 0x7ffee291e650: ./includes/ft_printf/libftprintf.a
+C: 0x7f941d500a20
+C: 0x7f941d500a40
+D: 0x7ffee291e558: ./includes/ft_printf/
+C: 0x7f941d600290
+C: 0x7f941d600080
+D: 0x7f941d6002b8: 
+D: 0x7ffee291a538: q~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: u~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+C: 0x7f941d5005e0
+D: 0x7ffee291a410:       
+D: 0x7ffee291a370: 4096
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a538: ‰~.
+C: 0x7f941d5009d0
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+C: 0x7f941d500a20
+D: 0x7f941d5009f8: 
+D: 0x7ffee291a508: ‘~.
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7f941d700048: 
+D: 0x7ffee291a2f8: ®~.
+D: 0x7ffee291e650: ./includes/ft_printf/srcs
+D: 0x7f941d600030: Makefile
+D: 0x7ffee291e708: 
+D: 0x7f941d500a00: author
+D: 0x7ffee291e708: 
+D: 0x7f941d4028c0: includes
+D: 0x7ffee291e708: 
+D: 0x7f941d700000: libft
+D: 0x7ffee291e708: 
+D: 0x7f941d402ac0: libftprintf.a
+D: 0x7ffee291e708: 
+D: 0x7f941d402880: srcs
+D: 0x7ffee291e708: 
+C: 0x7f941d700000
+C: 0x7f941d700020
+D: 0x7ffee291e788: ./includes/ft_printf/
+D: 0x7ffee291e7b8: ./includes/ft_printf/Makefile
+C: 0x7f941d700020
+C: 0x7f941d700000
+D: 0x7ffee291e788: ./includes/ft_printf/
+D: 0x7ffee291e7b8: ./includes/ft_printf/author
+C: 0x7f941d5009d0
+C: 0x7f941d5009f0
+D: 0x7ffee291e788: ./includes/ft_printf/
+C: 0x7f941d600030
+C: 0x7f941d5009d0
+D: 0x7f941d600058: 
+D: 0x7ffee291a6c8: ³~.
+C: 0x7f941d500ab0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strrchr.c
+C: 0x7f941d500b00
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstnew.o
+C: 0x7f941d700020
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putstr.c
+C: 0x7f941d402aa0
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strnew.o
+C: 0x7f941d4028d0
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strcmp.c
+C: 0x7f941d700180
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_absval.c
+C: 0x7f941d4028f0
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstadd.o
+C: 0x7f941d500b30
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strlcat.c
+C: 0x7f941d402920
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strmapi.o
+C: 0x7f941d500b60
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memcpy.c
+C: 0x7f941d6000a0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strjoin.o
+C: 0x7f941d500b90
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putnbr_fd.o
+C: 0x7f941d600880
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstdelone.o
+C: 0x7f941d6008c0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_is_whitespace.c
+C: 0x7f941d600e60
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strncpy.o
+C: 0x7f941d700250
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memmove.c
+C: 0x7f941d500bc0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strsplit.c
+C: 0x7f941d500bf0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strdup.o
+C: 0x7f941d600e90
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/get_next_line.o
+C: 0x7f941d402ae0
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strncpy.c
+C: 0x7f941d402b00
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memmove.o
+C: 0x7f941d402b30
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strchr.o
+C: 0x7f941d402b60
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstmap.c
+C: 0x7f941d402b90
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstadd.c
+C: 0x7f941d402bc0
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_striter.c
+C: 0x7f941d600ec0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putendl_fd.o
+C: 0x7f941d500c20
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strstr.c
+C: 0x7f941d700270
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_atoi.o
+C: 0x7f941d7002a0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isdigit.c
+C: 0x7f941d600ef0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memchr.o
+C: 0x7f941d7002d0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putnbr.c
+C: 0x7f941d500c50
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memccpy.c
+C: 0x7f941d700300
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strdel.c
+C: 0x7f941d402bf0
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstdel.o
+C: 0x7f941d700330
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isalpha.o
+C: 0x7f941d700360
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strdel.o
+C: 0x7f941d700390
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstmap.o
+C: 0x7f941d7003c0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memchr.c
+C: 0x7f941d600f20
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_bzero.c
+C: 0x7f941d7003f0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/get_next_line.h
+C: 0x7f941d700420
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_two_d_free.c
+C: 0x7f941d600f50
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putendl.o
+C: 0x7f941d700450
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/libft.h
+C: 0x7f941d600f80
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isalnum.c
+C: 0x7f941d500010
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstsethead.o
+C: 0x7f941d600fb0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isascii.o
+C: 0x7f941d500040
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putstr_fd.c
+C: 0x7f941d700480
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memcmp.o
+C: 0x7f941d600fe0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/Makefile
+C: 0x7f941d500070
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strcat.o
+C: 0x7f941d402c20
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memset.o
+C: 0x7f941d600930
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstiter.c
+C: 0x7f941d600960
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstdelone.c
+C: 0x7f941d402c50
+C: 0x7f941d4028a0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_toupper.c
+C: 0x7f941d5000a0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isprint.o
+C: 0x7f941d7004b0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strcpy.c
+C: 0x7f941d600990
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstnew.c
+C: 0x7f941d7004e0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_nbrlen.o
+C: 0x7f941d700510
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstiter.o
+C: 0x7f941d5000d0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strdup.c
+C: 0x7f941d700540
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_absval.o
+C: 0x7f941d700570
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putnbr_fd.c
+C: 0x7f941d7005a0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_itoa.o
+C: 0x7f941d500100
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_striteri.c
+C: 0x7f941d500130
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putnbr.o
+C: 0x7f941d6009c0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strmap.c
+C: 0x7f941d500160
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putendl_fd.c
+C: 0x7f941d500190
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memdel.c
+C: 0x7f941d6009f0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strnstr.c
+C: 0x7f941d5001c0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putchar.c
+C: 0x7f941d600a20
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memccpy.o
+C: 0x7f941d402c80
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/author
+C: 0x7f941d7005d0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isascii.c
+C: 0x7f941d5001f0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strlen.c
+C: 0x7f941d500220
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isalnum.o
+C: 0x7f941d700600
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strsub.c
+C: 0x7f941d600a50
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putstr.o
+C: 0x7f941d600a80
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strrchr.o
+C: 0x7f941d500250
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strnew.c
+C: 0x7f941d4028b0
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memalloc.o
+C: 0x7f941d600ab0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memalloc.c
+C: 0x7f941d600ae0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putendl.c
+C: 0x7f941d700630
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strclr.o
+C: 0x7f941d500280
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strlcat.o
+C: 0x7f941d600b10
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strncat.c
+C: 0x7f941d5002b0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_itoa.c
+C: 0x7f941d600b40
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strsub.o
+C: 0x7f941d402ce0
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strstr.o
+C: 0x7f941d402d10
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strmap.o
+C: 0x7f941d402d40
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strncmp.c
+C: 0x7f941d600b70
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isdigit.o
+C: 0x7f941d500c70
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstsethead.c
+C: 0x7f941d500ca0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strncmp.o
+C: 0x7f941d600ba0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memcmp.c
+C: 0x7f941d700660
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putchar.o
+C: 0x7f941d500cd0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strtrim.c
+C: 0x7f941d600bd0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strequ.c
+C: 0x7f941d500d00
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putchar_fd.c
+C: 0x7f941d600c00
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/get_next_line.c
+C: 0x7f941d600c30
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memset.c
+C: 0x7f941d500d30
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isalpha.c
+C: 0x7f941d500d60
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strcat.c
+C: 0x7f941d700690
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_tolower.c
+C: 0x7f941d7006c0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_toupper.o
+C: 0x7f941d7006f0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_striteri.o
+C: 0x7f941d600c60
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memdel.o
+C: 0x7f941d402d70
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_nbrlen.c
+C: 0x7f941d402da0
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strsplit.o
+C: 0x7f941d402dd0
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strnequ.c
+C: 0x7f941d500d90
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strjoin.c
+C: 0x7f941d402e10
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_is_whitespace.o
+C: 0x7f941d700720
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_atoi.c
+C: 0x7f941d600c90
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strclr.c
+C: 0x7f941d700750
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_bzero.o
+C: 0x7f941d601070
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strlen.o
+C: 0x7f941d402e40
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_striter.o
+C: 0x7f941d500dc0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strmapi.c
+C: 0x7f941d700780
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_tolower.o
+C: 0x7f941d500df0
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putchar_fd.o
+C: 0x7f941d402e70
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strncat.o
+C: 0x7f941d7007b0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strequ.o
+C: 0x7f941d500e20
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_isprint.c
+C: 0x7f941d7007e0
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/libft.a
+C: 0x7f941d500e50
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_lstdel.c
+C: 0x7f941d402ea0
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_putstr_fd.o
+C: 0x7f941d601090
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strchr.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strcmp.o
+C: 0x7f941d700810
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strnequ.o
+C: 0x7f941d402ed0
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_memcpy.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strcpy.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strtrim.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e5e8: ./includes/ft_printf/libft/
+D: 0x7ffee291e6c0: ./includes/ft_printf/libft/ft_strnstr.o
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a6c8: ¸~.
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1459
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/Makefile
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:          
+D: 0x7ffee291a330: 9
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/author
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d500e80
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1033
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_absval.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2132
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_absval.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402f40
+C: 0x7f941d402f00
+D: 0x7f941d402f68: 
+C: 0x7f941d402f00
+D: 0x7f941d402f68: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1333
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_atoi.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2692
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_atoi.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700850
+D: 0x7f941d700178: 
+C: 0x7f941d700850
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1014
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_bzero.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2448
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d700840
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_bzero.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1081
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700880
+C: 0x7f941d700840
+D: 0x7f941d7008a8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_is_whitespace.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2192
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_is_whitespace.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1009
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isalnum.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2184
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isalnum.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1017
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isalpha.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402f20
+C: 0x7f941d700840
+D: 0x7f941d402f48: 
+C: 0x7f941d700840
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+C: 0x7f941d402f50
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2116
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isalpha.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+C: 0x7f941d402f50
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 977
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isascii.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2088
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isascii.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+C: 0x7f941d402f50
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 990
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d402f00
+D: 0x7f941d500af8: 
+C: 0x7f941d402f00
+D: 0x7f941d500af8: 
+C: 0x7f941d402f00
+D: 0x7f941d500af8: 
+C: 0x7f941d402f00
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isdigit.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2088
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isdigit.o
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 991
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isprint.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2088
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_isprint.o
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1559
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_itoa.c
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d500e80
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 3308
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d6010c0
+D: 0x7f941d402cc8: 
+C: 0x7f941d6010c0
+D: 0x7f941d402cc8: 
+C: 0x7f941d6010c0
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_itoa.o
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1019
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstadd.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2552
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+ Jul 26 15:43 ft_lstadd.o
+-rw-r--r-- 1  pstringe 2017_october      1152  Jul 12 13:36 ft_lstdel.c
+-rw-r--r-- 1  pstringe 2017_october      2752  Jul 26 15:43 ft_lstdel.o
+-rw-r--r-- 1  pstringe 2017_october      1083  Jul 12 13:36 ft_lstdelone.c
+-rw-r--r-- 1  pstringe 2017_october      2672  Jul 26 15:43 ft_lstdelone.o
+-rw-r--r-- 1  pstringe 2017_october      1044  Jul 12 13:36 ft_lstiter.c
+-rw-r--r-- 1  pstringe 2017_october      2612  Jul 26 15:43 ft_lstiter.o
+-rw-r--r-- 1  pstringe 2017_october      1118  Jul 12 13:36 ft_lstmap.c
+-rw-r--r-- 1  pstringe 2017_october      2684  Jul 26 15:43 ft_lstmap.o
+-rw-r--r-- 1  pstringe 2017_october      1367  Jul 12 13:36 ft_lstnew.c
+-rw-r--r-- 1  pstringe 2017_october      2944  Jul 26 15:43 ft_lstnew.o
+-rw-r--r-- 1  pstringe 2017_october      1063  Jul 12 13:36 ft_lstsethead.c
+-rw-r--r-- 1  pstringe 2017_october      2644  Jul 26 15:43 ft_lstsethead.o
+-rw-r--r-- 1  pstringe 2017_october      1086  Jul 12 13:36 ft_memalloc.c
+-rw-r--r-- 1  pstringe 2017_october      2468  Jul 26 15:43 ft_memalloc.o
+-rw-r--r-- 1  pstringe 2017_october      1285  Jul 12 13:36 ft_memccpy.c
+-rw-r--r-- 1  pstringe 2017_october      2892  Jul 26 15:43 ft_memccpy.o
+-rw-r--r-- 1  pstringe 2017_october      1102  Jul 12 13:36 ft_memchr.c
+-rw-r--r-- 1  pstringe 2017_october      2568  Jul 26 15:43 ft_memchr.o
+-rw-r--r-- 1  pstringe 2017_october      1384  Jul 12 13:36 ft_memcmp.c
+-rw-r--r-- 1  pstringe 2017_october      2748  Jul 26 15:43 ft_memcmp.o
+-rw-r--r-- 1  pstringe 2017_october      1100  Jul 12 13:36 ft_memcpy.c
+-rw-r--r-- 1  pstringe 2017_october      2532  Jul 26 15:43 ft_memcpy.o
+-rw-r--r-- 1  pstringe 2017_october       967  Jul 12 13:36 ft_memdel.c
+-rw-r--r-- 1  pstringe 2017_october      2068  Jul 26 15:43 ft_memdel.o
+-rw-r--r-- 1  pstringe 2017_october      1111  Jul 12 13:36 ft_memmove.c
+-rw-r--r-- 1  pstringe 2017_october      2580  Jul 26 15:43 ft_memmove.o
+-rw-r--r-- 1  pstringe 2017_october      1067  Jul 12 13:36 ft_memset.c
+-rw-r--r-- 1  pstringe 2017_october      2536  Jul 26 15:43 ft_memset.o
+-rw-r--r-- 1  pstringe 2017_october      1053  Jul 12 13:36 ft_nbrlen.c
+-rw-r--r-- 1  pstringe 2017_october      2184  Jul 26 15:43 ft_nbrlen.o
+-rw-r--r-- 1  pstringe 2017_october       958  Jul 12 13:36 ft_putchar.c
+-rw-r--r-- 1  pstringe 2017_october      2084  Jul 26 15:43 ft_putchar.o
+-rw-r--r-- 1  pstringe 2017_october       970  Jul 12 13:36 ft_putchar_fd.c
+-rw-r--r-- 1  pstringe 2017_october      2168  Jul 26 15:43 ft_putchar_fd.o
+-rw-r--r-- 1  pstringe 2017_october       979  Jul 12 13:36 ft_putendl.c
+-rw-r--r-- 1  pstringe 2017_october      2140  Jul 26 15:43 ft_putendl.o
+-rw-r--r-- 1  pstringe 2017_october      1006  Jul 12 13:36 ft_putendl_fd.c
+-rw-r--r-- 1  pstringe 2017_october      2252  Jul 26 15:43 ft_putendl_fd.o
+-rw-r--r-- 1  pstringe 2017_october      1129  Jul 12 13:36 ft_putnbr.c
+-rw-r--r-- 1  pstringe 2017_october      2328  Jul 26 15:43 ft_putnbr.o
+-rw-r--r-- 1  pstringe 2017_october      1167  Jul 12 13:36 ft_putnbr_fd.c
+-rw-r--r-- 1  pstringe 2017_october      2420  Jul 26 15:43 ft_putnbr_fd.o
+-rw-r--r-- 1  pstringe 2017_october      1037  Jul 12 13:36 ft_putstr.c
+-rw-r--r-- 1  pstringe 2017_october      2280  Jul 26 15:43 ft_putstr.o
+-rw-r--r-- 1  pstringe 2017_october      1033  Jul 12 13:36 ft_putstr_fd.c
+-rw-r--r-- 1  pstringe 2017_october      2344  Jul 26 15:43 ft_putstr_fd.o
+-rw-r--r-- 1  pstringe 2017_october      1054  Jul 12 13:36 ft_strcat.c
+-rw-r--r-- 1  pstringe 2017_october      2256  Jul 26 15:43 ft_strcat.o
+-rw-r--r-- 1  pstringe 2017_october      1117  Jul 12 13:36 ft_strchr.c
+-rw-r--r-- 1  pstringe 2017_october      2388  Jul 26 15:43 ft_strchr.o
+-rw-r--r-- 1  pstringe 2017_october       979  Jul 12 13:36 ft_strclr.c
+-rw-r--r-- 1  pstringe 2017_october      2160  Jul 26 15:43 ft_strclr.o
+-rw-r--r-- 1  pstringe 2017_october      1117  Jul 12 13:36 ft_strcmp.c
+-rw-r--r-- 1  pstringe 2017_october      2692  Jul 26 15:43 ft_strcmp.o
+-rw-r--r-- 1  pstringe 2017_october      1040  Jul 12 13:36 ft_strcpy.c
+-rw-r--r-- 1  pstringe 2017_october      2268  Jul 26 15:43 ft_strcpy.o
+-rw-r--r-- 1  pstringe 2017_october       983  Jul 12 13:36 ft_strdel.c
+-rw-r--r-- 1  pstringe 2017_october      2132  Jul 26 15:43 ft_strdel.o
+-rw-r--r-- 1  pstringe 2017_october      1082  Jul 12 13:36 ft_strdup.c
+-rw-r--r-- 1  pstringe 2017_october      2316  Jul 26 15:43 ft_strdup.o
+-rw-r--r-- 1  pstringe 2017_october      1187  Jul 12 13:36 ft_strequ.c
+-rw-r--r-- 1  pstringe 2017_october      2788  Jul 26 15:43 ft_strequ.o
+-rw-r--r-- 1  pstringe 2017_october      1019  Jul 12 13:36 ft_striter.c
+-rw-r--r-- 1  pstringe 2017_october      2200  Jul 26 15:43 ft_striter.o
+-rw-r--r-- 1  pstringe 2017_october      1066  Jul 12 13:36 ft_striteri.c
+-rw-r--r-- 1  pstringe 2017_october      2560  Jul 26 15:43 ft_striteri.o
+-rw-r--r-- 1  pstringe 2017_october      1248  Jul 12 13:36 ft_strjoin.c
+-rw-r--r-- 1  pstringe 2017_october      2836  Jul 26 15:43 ft_strjoin.o
+-rw-r--r-- 1  pstringe 2017_october      1366  Jul 12 13:36 ft_strlcat.c
+-rw-r--r-- 1  pstringe 2017_october      2816  Jul 26 15:43 ft_strlcat.o
+-rw-r--r-- 1  pstringe 2017_october      1021  Jul 23 17:36 ft_strlen.c
+-rw-r--r-- 1  pstringe 2017_october      2400  Jul 26 15:43 ft_strlen.o
+-rw-r--r-- 1  pstringe 2017_october      1200  Jul 12 13:36 ft_strmap.c
+-rw-r--r-- 1  pstringe 2017_october      2528  Jul 26 15:43 ft_strmap.o
+-rw-r--r-- 1  pstringe 2017_october      1220  Jul 12 13:36 ft_strmapi.c
+-rw-r--r-- 1  pstringe 2017_october      2808  Jul 26 15:43 ft_strmapi.o
+-rw-r--r-- 1  pstringe 2017_october      1148  Jul 12 13:36 ft_strncat.c
+-rw-r--r-- 1  pstringe 2017_october      2648  Jul 26 15:43 ft_strncat.o
+-rw-r--r-- 1  pstringe 2017_october      1248  Jul 12 13:36 ft_strncmp.c
+-rw-r--r-- 1  pstringe 2017_october      2844  Jul 26 15:43 ft_strncmp.o
+-rw-r--r-- 1  pstringe 2017_october      1153  Jul 12 13:36 ft_strncpy.c
+-rw-r--r-- 1  pstringe 2017_october      2632  Jul 26 15:43 ft_strncpy.o
+-rw-r--r-- 1  pstringe 2017_october      1214  Jul 12 13:36 ft_strnequ.c
+-rw-r--r-- 1  pstringe 2017_october      2836  Jul 26 15:43 ft_strnequ.o
+-rw-r--r-- 1  pstringe 2017_octoberC: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d500e80
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstadd.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1152
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstdel.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2752
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d700840
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstdel.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1083
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstdelone.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2672
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstdelone.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1044
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstiter.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2612
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstiter.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1118
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d500e80
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstmap.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2684
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d6010c0
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstmap.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1367
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstnew.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2944
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstnew.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1063
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstsethead.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2644
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d700840
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_lstsethead.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1086
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memalloc.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2468
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memalloc.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1285
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memccpy.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2892
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memccpy.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1102
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memchr.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2568
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memchr.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1384
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memcmp.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d500e80
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2748
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memcmp.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1100
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d6010c0
+D: 0x7f941d500af8: 
+C: 0x7f941d6010c0
+D: 0x7f941d500af8: 
+C: 0x7f941d6010c0
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memcpy.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2532
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memcpy.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 967
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memdel.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2068
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memdel.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1111
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memmove.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2580
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memmove.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1067
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memset.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2536
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_memset.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+C: 0x7f941d402f50
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1053
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_nbrlen.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2184
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d6010c0
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_nbrlen.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 958
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putchar.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2084
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d500e80
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putchar.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 970
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d700840
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putchar_fd.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2168
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putchar_fd.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d700840
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 979
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putendl.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2140
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putendl.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402f20
+C: 0x7f941d700840
+D: 0x7f941d402f48: 
+C: 0x7f941d700840
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1006
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putendl_fd.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2252
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putendl_fd.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1129
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putnbr.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d500e80
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2328
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putnbr.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1167
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d700840
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putnbr_fd.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2420
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d6010c0
+D: 0x7f941d500a38: 
+C: 0x7f941d6010c0
+D: 0x7f941d500a38: 
+C: 0x7f941d6010c0
+D: 0x7f941d500a38: 
+C: 0x7f941d6010c0
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putnbr_fd.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1037
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d6010c0
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putstr.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2280
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putstr.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1033
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putstr_fd.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2344
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_putstr_fd.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1054
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strcat.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2256
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d700840
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strcat.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1117
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strchr.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2388
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strchr.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 979
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strclr.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2160
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strclr.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1117
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strcmp.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2692
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strcmp.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1040
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strcpy.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2268
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strcpy.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 983
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strdel.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2132
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strdel.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1082
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strdup.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2316
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strdup.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1187
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strequ.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2788
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strequ.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1019
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_striter.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2200
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d500e80
+D: 0x7f941d600058: 
+C: 0x7f941d500e80
+D: 0x7f941d600058: 
+C: 0x7f941d500e80
+D: 0x7f941d600058: 
+C: 0x7f941d500e80
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_striter.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1066
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_striteri.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2560
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_striteri.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1248
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strjoin.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2836
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strjoin.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1366
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strlcat.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2816
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strlcat.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d700840
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1021
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strlen.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2400
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strlen.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1200
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strmap.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2528
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strmap.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1220
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strmapi.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2808
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strmapi.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1148
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d6010c0
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strncat.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2648
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+C: 0x7f941d402f00
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strncat.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d500e80
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1248
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strncmp.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+C: 0x7f941d402f00
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2844
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strncmp.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d700840
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+C: 0x7f941d500e80
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1153
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strncpy.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2632
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strncpy.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1214
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strnequ.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2836
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strnequ.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0      1083  Jul 12 13:36 ft_strnew.c
+-rw-r--r-- 1  pstringe 2017_october      2520  Jul 26 15:43 ft_strnew.o
+-rw-r--r-- 1  pstringe 2017_october      1200  Jul 12 13:36 ft_strnstr.c
+-rw-r--r-- 1  pstringe 2017_october      2736  Jul 26 15:43 ft_strnstr.o
+-rw-r--r-- 1  pstringe 2017_october      1215  Jul 12 13:36 ft_strrchr.c
+-rw-r--r-- 1  pstringe 2017_october      2468  Jul 26 15:43 ft_strrchr.o
+-rw-r--r-- 1  pstringe 2017_october      2123  Jul 12 13:36 ft_strsplit.c
+-rw-r--r-- 1  pstringe 2017_october      3816  Jul 26 15:43 ft_strsplit.o
+-rw-r--r-- 1  pstringe 2017_october      1254  Jul 12 13:36 ft_strstr.c
+-rw-r--r-- 1  pstringe 2017_october      2796  Jul 26 15:43 ft_strstr.o
+-rw-r--r-- 1  pstringe 2017_october      1168  Jul 12 13:36 ft_strsub.c
+-rw-r--r-- 1  pstringe 2017_october      2704  Jul 26 15:43 ft_strsub.o
+-rw-r--r-- 1  pstringe 2017_october      1433  Jul 12 13:36 ft_strtrim.c
+-rw-r--r-- 1  pstringe 2017_october      3064  Jul 26 15:43 ft_strtrim.o
+-rw-r--r-- 1  pstringe 2017_october       974  Jul 12 13:36 ft_tolower.c
+-rw-r--r-- 1  pstringe 2017_october      2076  Jul 26 15:43 ft_tolower.o
+-rw-r--r-- 1  pstringe 2017_october       975  Jul 12 13:36 ft_toupper.c
+-rw-r--r-- 1  pstringe 2017_october      2076  Jul 26 15:43 ft_toupper.o
+-rw-r--r-- 1  pstringe 2017_october      1012  Jul 12 13:36 ft_two_d_free.c
+-rw-r--r-- 1  pstringe 2017_october      1799  Jul 12 13:36 get_next_line.c
+-rw-r--r-- 1  pstringe 2017_october      1149  Jul 12 13:36 get_next_line.h
+-rw-r--r-- 1  pstringe 2017_october      4096  Jul 26 15:43 get_next_line.o
+-rw-r--r-- 1  pstringe 2017_october    165784  Jul 26 15:43 libft.a
+-rw-r--r-- 1  pstringe 2017_october      4006  Jul 12 13:36 libft.h
+x7ffee291a330: 1083
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strnew.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+C: 0x7f941d402f50
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2520
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strnew.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+C: 0x7f941d6010e0
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1200
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strnstr.c
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2736
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strnstr.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1215
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strrchr.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2468
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strrchr.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d700840
+D: 0x7f941d402cc8: 
+C: 0x7f941d700840
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2123
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strsplit.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d500e80
+D: 0x7f941d402cc8: 
+C: 0x7f941d500e80
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 3816
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d6010c0
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strsplit.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1254
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d700840
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strstr.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2796
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strstr.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1168
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strsub.c
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2704
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strsub.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1433
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strtrim.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 3064
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_strtrim.o
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 974
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_tolower.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+C: 0x7f941d500a40
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2076
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_tolower.o
+C: 0x7f941d6010c0
+C: 0x7f941d600030
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d6010e0
+C: 0x7f941d6010c0
+C: 0x7f941d601110
+D: 0x7ffee291a3d0:        
+D: 0x7ffee291a330: 975
+D: 0x7f941d601108: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_toupper.c
+C: 0x7f941d500e80
+C: 0x7f941d500ad0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 2076
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500a10
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+C: 0x7f941d500e80
+D: 0x7f941d500a38: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_toupper.o
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+C: 0x7f941d700890
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1012
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/ft_two_d_free.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+C: 0x7f941d402f00
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1799
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/get_next_line.c
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d700840
+D: 0x7f941d500af8: 
+C: 0x7f941d700840
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d402f20
+C: 0x7f941d402f00
+C: 0x7f941d402f50
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 1149
+D: 0x7f941d402f48: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/get_next_line.h
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+C: 0x7f941d700860
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 4096
+D: 0x7f941d700178: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/get_next_line.o
+C: 0x7f941d402f00
+C: 0x7f941d402ca0
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d600030
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+C: 0x7f941d6010c0
+D: 0x7f941d600058: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+C: 0x7f941d500a10
+D: 0x7ffee291a3d0:     
+D: 0x7ffee291a330: 165784
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d700150
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+C: 0x7f941d700840
+D: 0x7f941d700178: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/libft.a
+C: 0x7f941d700840
+C: 0x7f941d700150
+D: 0x7ffee291e518: ./includes/ft_printf/libft/
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a4f8: q~.
+C: 0x7f941d500ad0
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+C: 0x7f941d500e80
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: u~.
+C: 0x7f941d500ad0
+C: 0x7f941d402f00
+C: 0x7f941d402f20
+D: 0x7ffee291a3d0:       
+D: 0x7ffee291a330: 4006
+D: 0x7f941d500af8: 
+D: 0x7ffee291a4f8: ‰~.
+C: 0x7f941d402ca0
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+C: 0x7f941d402f00
+D: 0x7f941d402cc8: 
+D: 0x7ffee291a4c8: ‘~.
+C: 0x7f941d700860
+C: 0x7f941d700840
+D: 0x7f941d700888: 
+D: 0x7ffee291a2b8: ®~.
+D: 0x7ffee291e610: ./includes/ft_printf/libft/libft.h
+D: 0x7f941d402ed0: Makefile
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700810: author
+D: 0x7ffee291e6c8: 
+D: 0x7f941d601090: ft_absval.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402ea0: ft_absval.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7007e0: ft_atoi.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500e50: ft_atoi.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d601070: ft_bzero.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402e70: ft_bzero.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500e20: ft_is_whitespace.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7007b0: ft_is_whitespace.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500df0: ft_isalnum.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700780: ft_isalnum.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402e40: ft_isalpha.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500dc0: ft_isalpha.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700750: ft_isascii.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500d90: ft_isascii.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402e10: ft_isdigit.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600c90: ft_isdigit.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700720: ft_isprint.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600c60: ft_isprint.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7006f0: ft_itoa.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402dd0: ft_itoa.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500d60: ft_lstadd.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402da0: ft_lstadd.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402d70: ft_lstdel.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402d40: ft_lstdel.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600c30: ft_lstdelone.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7006c0: ft_lstdelone.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700690: ft_lstiter.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700660: ft_lstiter.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500d30: ft_lstmap.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500d00: ft_lstmap.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600c00: ft_lstnew.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600bd0: ft_lstnew.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500cd0: ft_lstsethead.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600ba0: ft_lstsethead.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500ca0: ft_memalloc.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700630: ft_memalloc.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600b70: ft_memccpy.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500c70: ft_memccpy.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d5002b0: ft_memchr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600b40: ft_memchr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402d10: ft_memcmp.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402ce0: ft_memcmp.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d4028b0: ft_memcpy.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600b10: ft_memcpy.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500280: ft_memdel.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600ae0: ft_memdel.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500250: ft_memmove.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700600: ft_memmove.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600ab0: ft_memset.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600a80: ft_memset.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402c80: ft_nbrlen.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500220: ft_nbrlen.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600a50: ft_putchar.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600a20: ft_putchar.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7005d0: ft_putchar_fd.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d5001f0: ft_putchar_fd.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d5001c0: ft_putendl.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7005a0: ft_putendl.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402c50: ft_putendl_fd.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d6009f0: ft_putendl_fd.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500190: ft_putnbr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d6009c0: ft_putnbr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500160: ft_putnbr_fd.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500130: ft_putnbr_fd.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600990: ft_putstr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500100: ft_putstr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d5000d0: ft_putstr_fd.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700570: ft_putstr_fd.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700540: ft_strcat.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700510: ft_strcat.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d5000a0: ft_strchr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7004e0: ft_strchr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7004b0: ft_strclr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600960: ft_strclr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700480: ft_strcmp.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500070: ft_strcmp.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402c20: ft_strcpy.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600930: ft_strcpy.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600fe0: ft_strdel.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402bf0: ft_strdel.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500040: ft_strdup.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600fb0: ft_strdup.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700450: ft_strequ.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500010: ft_strequ.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600f80: ft_striter.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500c50: ft_striter.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600f50: ft_striteri.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700420: ft_striteri.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600f20: ft_strjoin.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7003f0: ft_strjoin.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7003c0: ft_strlcat.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600ef0: ft_strlcat.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700390: ft_strlen.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700360: ft_strlen.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700330: ft_strmap.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700300: ft_strmap.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402bc0: ft_strmapi.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7002d0: ft_strmapi.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500c20: ft_strncat.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d7002a0: ft_strncat.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600ec0: ft_strncmp.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700270: ft_strncmp.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700250: ft_strncpy.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500bf0: ft_strncpy.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600e90: ft_strnequ.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402b90: ft_strnequ.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402b60: ft_strnew.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402b30: ft_strnew.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402b00: ft_strnstr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402ae0: ft_strnstr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402920: ft_strrchr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600e60: ft_strrchr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500bc0: ft_strsplit.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500b90: ft_strsplit.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700180: ft_strstr.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d6008c0: ft_strstr.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600880: ft_strsub.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d6000a0: ft_strsub.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500b60: ft_strtrim.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d600080: ft_strtrim.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500b30: ft_tolower.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d4028f0: ft_tolower.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500b00: ft_toupper.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d4028d0: ft_toupper.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700020: ft_two_d_free.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402aa0: get_next_line.c
+D: 0x7ffee291e6c8: 
+D: 0x7f941d402880: get_next_line.h
+D: 0x7ffee291e6c8: 
+D: 0x7f941d700000: get_next_line.o
+D: 0x7ffee291e6c8: 
+D: 0x7f941d500ab0: libft.a
+D: 0x7ffee291e6c8: 
+D: 0x7f941d5009d0: libft.h
+D: 0x7ffee291e6c8: 
+C: 0x7f941d600e60
+C: 0x7f941d600020
+D: 0x7ffee291e748: ./includes/ft_printf/libft/
+D: 0x7ffee291e778: ./includes/ft_printf/libft/Makefile
+C: 0x7f941d600080
+C: 0x7f941d600020
+D: 0x7ffee291e748: ./includes/ft_printf/libft/
+D: 0x7ffee291e778: ./includes/ft_printf/libft/author
+D: 0x7ffee291e798: ./includes/ft_printf/libft
+D: 0x7ffee291e7b8: ./includes/ft_printf/libft

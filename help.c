@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:24:10 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/25 10:21:56 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 12:01:43 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,21 @@ int		die(int c, char *path)
 	return (c);
 }
 
-char 	*get_path(char *parent, char *name)
+void 	get_path(char path[512], char *parent, char *name)
 {
+	/*
 	char *tmp;
 	char *new;
-
+	*/
+	ft_bzero(path, 512);
+	ft_memcpy(path, parent, ft_strlen(parent));
+	ft_strlcat(path, "/", 512);
+	ft_strlcat(path, name, 512);
+	/*
 	tmp = ft_strjoin(parent, "/");
 	new = ft_strjoin(tmp, name);
 	ft_memdel((void**)&tmp);
-	return (new);
+	*/
 }
 
 char	*get_month(int d)

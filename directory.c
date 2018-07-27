@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:30:57 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/25 09:19:58 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 11:58:46 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	get_files(t_list **dlst, char *path, t_ops *ops)
 	struct dirent	*dp;
 	DIR				*dpntr;	
 	int 			blocks;
-	char			*file_path;
+	char			full_path[512];
 	
 	if (!(S_ISDIR(get_stats(path).st_mode)))
 		return(die(-2, path));
@@ -32,9 +32,9 @@ static int	get_files(t_list **dlst, char *path, t_ops *ops)
 			ft_lstadd(dlst, ft_lstnew(dp->d_name, (ft_strlen(dp->d_name) + 1)));
 			if (ops->l)
 			{
-				file_path = get_path(path, dp->d_name);
-				blocks += get_blocks(file_path);
-				ft_memdel((void**)&file_path);
+				get_path(full_path, path, dp->d_name);
+				blocks += get_blocks(full_path);
+				ft_memdel((void**)&full_path);
 			}
 		}
 		dp = readdir(dpntr);

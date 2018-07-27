@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 19:31:04 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/25 08:44:05 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 12:01:31 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,16 @@ void			output_dir(char *path, t_ops *ops);
 ** help
 */
 
-int		die(int c, char *path);
-char 	*get_path(char *parent, char *name);
-char	*get_month(int d);
+int				die(int c, char *path);
+void 			get_path(char path[512], char *parent, char *name);
+char			*get_month(int d);
 
 /*
 **	sort
 */
 
-int		lex(void *a, void *b, void **aux, int len);
-int		tim(void *a, void *b, void **aux, int len);
-int		rev(void *a, void *b, void **aux, int len);
+int				lex(void *a, void *b, void **aux, int len);
+int				tim(void *a, void *b, void **aux, int len);
+int				rev(void *a, void *b, void **aux, int len);
 
 #endif

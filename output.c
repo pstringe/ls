@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:25:29 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/25 14:14:33 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/27 11:56:20 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,12 +81,12 @@ void	output_stats(char *file, void **aux)
 {
 	struct stat		stats;
 	t_ops			*ops;
-	char 			*path;
+	char 			path[512];
 	char 			*pw;
 	char			*gw;
 
 	ops = (t_ops*)*aux;
-	path = (char*)get_path((char*)aux[1], file);
+	get_path(path, (char*)aux[1], file);
 	if (!ops->l)
 		ft_printf("%s\n", file);
 	else
@@ -107,5 +107,5 @@ void	output_stats(char *file, void **aux)
 		output_time(stats.st_mtime);
 		output_name(path, stats.st_mode);
 	}
-	ft_memdel((void**)&path);
+	//ft_memdel((void**)&path);
 }
