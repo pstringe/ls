@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:24:10 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 12:01:43 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 16:10:48 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void 	get_path(char path[512], char *parent, char *name)
 	char *tmp;
 	char *new;
 	*/
+	if (!path || !parent)
+		return ;
 	ft_bzero(path, 512);
 	ft_memcpy(path, parent, ft_strlen(parent));
 	ft_strlcat(path, "/", 512);

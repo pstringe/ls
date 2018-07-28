@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:20:56 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 16:44:06 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 16:15:54 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,47 +53,36 @@ void 	recurse(char *dir, t_ops *ops)
 {
 	DIR				*dpntr;
 	struct dirent 	*cur;
-	char 			subdir[512];
-	//char			tmp[512];
+	char 			*subdir;
 
+	subdir = ft_strnew(512);
 	if (can_output(dir, ops))
 		output_dir(dir, ops);
 	if (!(dpntr = opendir(dir)))
-	{
-		//ft_memdel((void**)&dir);
 		return ;
-	}
-
 	ft_bzero(subdir, 512);
 	while (dpntr && (cur = readdir(dpntr)))
 	{
 		if (can_recurse(dir, cur->d_name, ops))
 		{
-			/*
-			if (S_ISLNK(get_stats(dir).st_mode) && readlink(dir, tmp, 512) >= 0)
-				subdir = get_path(dir, tmp);
-			
-			else
-			*/
 			get_path(subdir, dir, cur->d_name);
-			if (!opendir(subdir))
+			if (!subdir)
 			{
 				ft_bzero(subdir, 512);
-				//ft_memdel((void**)&subdir);
+				subdir = NULL;
+			}
+			if (subdir && !opendir(subdir))
+			{
+				ft_bzero(subdir, 512);
 				continue ;
 			}
 			recurse(subdir, ops);
 			ft_bzero(subdir, 512);
-			//if (&subdir)
-				//ft_memdel((void**)&subdir);
+			subdir = NULL;
 		}
 	}
-	/*
-	if (dir)
-		ft_memdel((void**)&dir);
-	*/
-	if (cur)
-		ft_memdel((void**)&cur);
+	free(subdir);
+	subdir = NULL;
 	closedir(dpntr);
 }
 

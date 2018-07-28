@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:25:29 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 11:56:20 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 15:33:06 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,5 +107,4 @@ void	output_stats(char *file, void **aux)
 		output_time(stats.st_mtime);
 		output_name(path, stats.st_mode);
 	}
-	//ft_memdel((void**)&path);
 }
