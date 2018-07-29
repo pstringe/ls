@@ -6,35 +6,37 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:20:56 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 18:16:53 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 19:52:47 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-static int		can_output(char *file, t_ops *ops)
+static int	can_output(char *file, t_ops *ops)
 {
-	int 	l;
-	int 	hidden;
-	int 	cur_dir;
-	char 	*a;
-	char 	*b;
+	int		l;
+	int		hidden;
+	int		cur_dir;
+	char	*a;
+	char	*b;
 
 	if (!file)
 		return (0);
 	l = ft_strlen(file);
 	cur_dir = !ft_strncmp(file, ".", l);
-	hidden = !cur_dir && ((a = strrchr(file, '.')) > (b = strrchr(file, '/')));
+	a = strrchr(file, '.');
+	b = strrchr(file, '/');
+	hidden = !cur_dir && a > b;
 	a = NULL;
 	b = NULL;
 	return ((!ops->a && (!hidden || cur_dir)) || ops->a);
 }
 
-static int		can_recurse(char *dir, char *file, t_ops *ops)
+static int	can_recurse(char *dir, char *file, t_ops *ops)
 {
 	int		l;
 	int		link;
-	char 	link_name[512];
+	char	link_name[512];
 	char	tmp[512];
 
 	link = 0;
@@ -51,28 +53,22 @@ static int		can_recurse(char *dir, char *file, t_ops *ops)
 			ft_strncmp(link ? tmp : file, "..", l));
 }
 
-void 	recurse(char *dir, t_ops *ops)
+void		recurse(char *dir, t_ops *ops)
 {
 	DIR				*dpntr;
-	struct dirent 	*cur;
-	char 			*subdir;
+	struct dirent	*cur;
+	char			*subdir;
 
 	subdir = ft_strnew(512);
 	if (can_output(dir, ops))
 		output_dir(dir, ops);
 	if (!(dpntr = opendir(dir)))
 		return ;
-	ft_bzero(subdir, 512);
 	while (dpntr && (cur = readdir(dpntr)))
 	{
 		if (can_recurse(dir, cur->d_name, ops))
 		{
 			get_path(subdir, dir, cur->d_name);
-			if (!subdir)
-			{
-				ft_bzero(subdir, 512);
-				//subdir = NULL;
-			}
 			if (subdir && !S_ISDIR(get_stats(subdir).st_mode))
 			{
 				ft_bzero(subdir, 512);
@@ -80,11 +76,8 @@ void 	recurse(char *dir, t_ops *ops)
 			}
 			recurse(subdir, ops);
 			ft_bzero(subdir, 512);
-			//subdir = NULL;
 		}
 	}
-	free(subdir);
-	subdir = NULL;
+	ft_memdel((void**)&subdir);
 	closedir(dpntr);
 }
-
