@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:20:56 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 16:15:54 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 18:03:09 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static int		can_output(char *file, t_ops *ops)
 	char 	*a;
 	char 	*b;
 
+	if (!file)
+		return (0);
 	l = ft_strlen(file);
 	cur_dir = !ft_strncmp(file, ".", l);
 	hidden = !cur_dir && ((a = strrchr(file, '.')) > (b = strrchr(file, '/')));
@@ -71,7 +73,7 @@ void 	recurse(char *dir, t_ops *ops)
 				ft_bzero(subdir, 512);
 				subdir = NULL;
 			}
-			if (subdir && !opendir(subdir))
+			if (subdir && !S_ISDIR(get_stats(subdir).st_mode))
 			{
 				ft_bzero(subdir, 512);
 				continue ;
