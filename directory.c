@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:30:57 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 16:09:12 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 19:42:17 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 static int	get_files(t_list **dlst, char *path, t_ops *ops)
 {
 	struct dirent	*dp;
-	DIR				*dpntr;	
-	int 			blocks;
+	DIR				*dpntr;
+	int				blocks;
 	char			full_path[512];
-	
+
 	if (!(S_ISDIR(get_stats(path).st_mode)))
-		return(die(-2, path));
-	if(!(dpntr = opendir(path)))
-		return (die(-1, path));	
-	dp = readdir(dpntr);
+		return (die(-2, path));
+	if (!(dpntr = opendir(path)))
+		return (die(-1, path));
 	blocks = 0;
-	while (dp)
+	while ((dp = readdir(dpntr)))
 	{
 		if (!(!ops->a && dp->d_name[0] == '.'))
 		{
@@ -36,13 +35,12 @@ static int	get_files(t_list **dlst, char *path, t_ops *ops)
 				blocks += get_blocks(full_path);
 			}
 		}
-		dp = readdir(dpntr);
 	}
 	closedir(dpntr);
 	return (blocks);
 }
 
-static void sort_files(t_list **dlst, t_ops *ops, void **aux)
+static void	sort_files(t_list **dlst, t_ops *ops, void **aux)
 {
 	if (!ops->t && !ops->r)
 		ft_lstsort(*dlst, lex, aux, 2);
@@ -53,13 +51,13 @@ static void sort_files(t_list **dlst, t_ops *ops, void **aux)
 }
 
 /*
-**	given a directory, extracts filnames and prints relvant information in propper order
-**	depending on the specified options
+**	given a directory, extracts filnames and prints relvant information in
+**	propper order depending on the specified options
 */
 
-void	output_dir(char *path, t_ops *ops)
+void		output_dir(char *path, t_ops *ops)
 {
-	void			*aux[2];	
+	void			*aux[2];
 	int				blocks;
 	t_list			*dlst;
 
