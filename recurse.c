@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:20:56 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 18:03:09 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 18:16:53 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void 	recurse(char *dir, t_ops *ops)
 			if (!subdir)
 			{
 				ft_bzero(subdir, 512);
-				subdir = NULL;
+				//subdir = NULL;
 			}
 			if (subdir && !S_ISDIR(get_stats(subdir).st_mode))
 			{
@@ -80,7 +80,7 @@ void 	recurse(char *dir, t_ops *ops)
 			}
 			recurse(subdir, ops);
 			ft_bzero(subdir, 512);
-			subdir = NULL;
+			//subdir = NULL;
 		}
 	}
 	free(subdir);
