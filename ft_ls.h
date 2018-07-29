@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 19:31:04 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 12:01:31 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 20:36:18 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct	s_ops
 	int	a;
 	int	t;
 	int	r;
-	int	R;
+	int	r_r;
 }				t_ops;
 
 /*
@@ -51,6 +51,10 @@ int				get_blocks(char *path);
 ** output
 */
 
+void			output_name(const char *fn, mode_t m);
+void			output_time(time_t mod);
+void			output_permissions(mode_t m);
+void			output_type(char *path, mode_t m);
 void			output_stats(char *file, void **aux);
 void			output_dir(char *path, t_ops *ops);
 
@@ -59,7 +63,7 @@ void			output_dir(char *path, t_ops *ops);
 */
 
 int				die(int c, char *path);
-void 			get_path(char path[512], char *parent, char *name);
+void			get_path(char path[512], char *parent, char *name);
 char			*get_month(int d);
 
 /*

@@ -6,13 +6,13 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:25:29 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 19:30:42 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 20:25:01 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-static void	output_type(char *path, mode_t m)
+void	output_type(char *path, mode_t m)
 {
 	char ret[512];
 
@@ -32,33 +32,36 @@ static void	output_type(char *path, mode_t m)
 		ft_putchar('s');
 }
 
-static void	output_permissions(mode_t m)
+void	output_permissions(mode_t m)
 {
 	ft_putchar((m & S_IRUSR) ? 'r' : '-');
-    ft_putchar((m & S_IWUSR) ? 'w' : '-');
-    ft_putchar((m & S_IXUSR) ? 'x' : '-');
-    ft_putchar((m & S_IRGRP) ? 'r' : '-');
-    ft_putchar((m & S_IWGRP) ? 'w' : '-');
-    ft_putchar((m & S_IXGRP) ? 'x' : '-');
-    ft_putchar((m & S_IROTH) ? 'r' : '-');
-    ft_putchar((m & S_IWOTH) ? 'w' : '-');
-    ft_putchar((m & S_IXOTH) ? 'x' : '-');
+	ft_putchar((m & S_IWUSR) ? 'w' : '-');
+	ft_putchar((m & S_IXUSR) ? 'x' : '-');
+	ft_putchar((m & S_IRGRP) ? 'r' : '-');
+	ft_putchar((m & S_IWGRP) ? 'w' : '-');
+	ft_putchar((m & S_IXGRP) ? 'x' : '-');
+	ft_putchar((m & S_IROTH) ? 'r' : '-');
+	ft_putchar((m & S_IWOTH) ? 'w' : '-');
+	ft_putchar((m & S_IXOTH) ? 'x' : '-');
 }
 
-static void	output_time(time_t mod)
+void	output_time(time_t mod)
 {
 	struct tm	*time;
 	char		*month;
+	char		*format;
 
+	format = "%4s %2d %.2d:%.2d";
 	time = localtime(&mod);
-	ft_printf("%4s %2d %.2d:%.2d", (month = get_month(time->tm_mon)), time->tm_mday, time->tm_hour, time->tm_min);
+	month = get_month(time->tm_mon);
+	ft_printf(format, month, time->tm_mday, time->tm_hour, time->tm_min);
 	month = NULL;
 }
 
-static void	output_name(const char *fn, mode_t m)
+void	output_name(const char *fn, mode_t m)
 {
-	char buf[512];
-	int ret;
+	char	buf[512];
+	int		ret;
 
 	if (m & S_IFLNK)
 	{
@@ -75,36 +78,4 @@ static void	output_name(const char *fn, mode_t m)
 	}
 	else
 		ft_printf(" %s\n", ft_strrchr(fn, '/') + 1);
-}
-
-void	output_stats(char *file, void **aux)
-{
-	struct stat		stats;
-	t_ops			*ops;
-	char 			path[512];
-	char 			*pw;
-	char			*gw;
-
-	ops = (t_ops*)*aux;
-	get_path(path, (char*)aux[1], file);
-	if (!ops->l)
-		ft_printf("%s\n", file);
-	else
-	{
-		stats = get_stats(path);
-		pw = getpwuid(stats.st_uid) ? getpwuid(stats.st_uid)->pw_name : NULL;
-		if (!pw)
-			ft_printf("path: %s\nuid: %d\n", path, stats.st_uid);
-		gw = getgrgid(stats.st_gid) ? getgrgid(stats.st_gid)->gr_name: NULL;
-		output_type(path, stats.st_mode);
-		output_permissions(stats.st_mode);
-		ft_printf(" %d", stats.st_nlink);
-		ft_printf("%10s %10s", pw, gw);
-		if (stats.st_rdev)
-			ft_printf("%3d, %3d ", major(stats.st_rdev), minor(stats.st_rdev));
-		else
-			ft_printf("%10lld ", stats.st_size);
-		output_time(stats.st_mtime);
-		output_name(path, stats.st_mode);
-	}
 }

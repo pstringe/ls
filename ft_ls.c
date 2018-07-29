@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 19:35:40 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 20:34:26 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	init_options(t_ops **ops)
 	o->a = 0;
 	o->t = 0;
 	o->r = 0;
-	o->R = 0;
+	o->r_r = 0;
 	*ops = o;
 }
 
@@ -46,7 +46,7 @@ int		parse_options(char **args, int argn, t_ops *ops)
 			else if (args[i][j] == 'r')
 				ops->r = 1;
 			else if (args[i][j] == 'R')
-				ops->R = 1;
+				ops->r_r = 1;
 			else
 				return (die(-3, &args[i][j]));
 	}
@@ -59,13 +59,13 @@ void	ft_ls(t_ops *ops, char **argv, int argc, int idx)
 	int i;
 
 	no_of_dirs = argc - (idx < 0 ? 1 : idx);
-	if (!ops->R && !no_of_dirs)
+	if (!ops->r_r && !no_of_dirs)
 		output_dir(".", ops);
-	if (ops->R && !no_of_dirs)
+	if (ops->r_r && !no_of_dirs)
 		recurse(".", ops);
 	i = idx - 1;
 	while (no_of_dirs-- > 0)
-		if (!ops->R)
+		if (!ops->r_r)
 			output_dir(argv[++i], ops);
 		else
 			recurse(argv[++i], ops);

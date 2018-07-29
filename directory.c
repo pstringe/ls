@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:30:57 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 19:42:17 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 20:36:15 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void		output_dir(char *path, t_ops *ops)
 	int				blocks;
 	t_list			*dlst;
 
-	if (ops->R && ft_strncmp(path, ".", ft_strlen(path)))
+	if (ops->r_r && ft_strncmp(path, ".", ft_strlen(path)))
 		ft_printf("\n%s\n", path);
 	dlst = NULL;
 	blocks = get_files(&dlst, path, ops);
