@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:24:10 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 19:09:27 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 20:10:54 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 int		die(int c, char *path)
 {
+	char *permission;
+	char *usage;
+
+	permission = "you do not have permission to this directory";
+	usage = "usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]";
 	if (c == -1)
-		ft_printf("ft_ls: %s: you do not have permission to this directory\n", path);
+		ft_printf("ft_ls: %s: %s\n", path, permission);
 	else if (c == -2)
 		ft_printf("ft_ls: %s: no such file or directory\n", path);
 	else if (c == -3)
-		ft_printf("ft_ls: illegal option -- %s\nusage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]\n", path);
+		ft_printf("ft_ls: illegal option -- %s\n%s\n", path, usage);
 	return (c);
 }
 
-void 	get_path(char path[512], char *parent, char *name)
+void	get_path(char path[512], char *parent, char *name)
 {
 	if (!path || !parent)
 		return ;
@@ -33,7 +38,7 @@ void 	get_path(char path[512], char *parent, char *name)
 	ft_strlcat(path, name, 512);
 }
 
-char	*get_month(int d)
+char	*first(int d)
 {
 	char *m;
 
@@ -49,7 +54,16 @@ char	*get_month(int d)
 		m = "May";
 	else if (d == 5)
 		m = "Jun";
-	else if (d == 6)
+	else
+		m = NULL;
+	return (m);
+}
+
+char	*last(int d)
+{
+	char *m;
+
+	if (d == 6)
 		m = "Jul";
 	else if (d == 7)
 		m = "Aug";
@@ -63,5 +77,16 @@ char	*get_month(int d)
 		m = "Dec";
 	else
 		m = NULL;
+	return (m);
+}
+
+char	*get_month(int d)
+{
+	char *m;
+
+	if ((m = first(d)))
+		return (m);
+	else
+		m = last(d);
 	return (m);
 }
