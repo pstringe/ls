@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:55:49 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/27 16:44:04 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 19:09:12 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int 	parse_options(char **args, int argn, t_ops *ops)
 			else if (args[i][j] == 'R')
 				ops->R = 1;
 			else
-				return (0);
+				return (die(-3, &args[i][j]));
 		}
 	}
 	return (i);

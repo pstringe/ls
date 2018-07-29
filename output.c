@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:25:29 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 15:33:06 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 19:30:42 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ static void	output_type(char *path, mode_t m)
 		ft_putchar('c');
 	else if (S_ISBLK(m))
 		ft_putchar('b');
+	else if (S_ISSOCK(m))
+		ft_putchar('s');
 	else if (m & S_IFDIR)
 		ft_putchar('d');
-	else if (m & S_IFSOCK)
-		ft_putchar('s');
 	else if (m & S_IFIFO)
 		ft_putchar('s');
 }

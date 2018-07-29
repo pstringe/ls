@@ -6,7 +6,7 @@
 /*   By: pstringe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/24 17:24:10 by pstringe          #+#    #+#             */
-/*   Updated: 2018/07/28 16:10:48 by pstringe         ###   ########.fr       */
+/*   Updated: 2018/07/28 19:09:27 by pstringe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,21 @@ int		die(int c, char *path)
 {
 	if (c == -1)
 		ft_printf("ft_ls: %s: you do not have permission to this directory\n", path);
-	if (c == -2)
+	else if (c == -2)
 		ft_printf("ft_ls: %s: no such file or directory\n", path);
+	else if (c == -3)
+		ft_printf("ft_ls: illegal option -- %s\nusage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]\n", path);
 	return (c);
 }
 
 void 	get_path(char path[512], char *parent, char *name)
 {
-	/*
-	char *tmp;
-	char *new;
-	*/
 	if (!path || !parent)
 		return ;
 	ft_bzero(path, 512);
 	ft_memcpy(path, parent, ft_strlen(parent));
 	ft_strlcat(path, "/", 512);
 	ft_strlcat(path, name, 512);
-	/*
-	tmp = ft_strjoin(parent, "/");
-	new = ft_strjoin(tmp, name);
-	ft_memdel((void**)&tmp);
-	*/
 }
 
 char	*get_month(int d)
